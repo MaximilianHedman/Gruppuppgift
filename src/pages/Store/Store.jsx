@@ -1,13 +1,14 @@
 import React from 'react';
-import './Home.css';
+import './Store.css'
 
-const Home = () => {
+const Store = () => {
     
+
     return (
         <div className="home">
-            <h1>Home</h1>
+            <h1>Store</h1>
         </div>
     );
-};
+}
 
-export default Home;
+export default Store
