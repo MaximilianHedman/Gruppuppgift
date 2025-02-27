@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #C4BCB2;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.quick-links  {
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    
+}
+
+.quick-links h3 {
+    font-size: 1rem;
+}
+
+.quick-links li {
+    list-style-type: none;
+    font-size: 0.9rem;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 2px;
+    background-color: #dedbd7;
+}
+
+.subscribe-form h2 {
+    font-size: 1rem;
+}
+
+.subscribe-form p {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+}
+
+.subscribe-input {
+    padding-top: 1.5rem;
+}
+
+.subscribe-field {
+    margin-right: 0.5rem;
+    padding: 0.8rem;
+    border: 1px solid #1A1B1C;
+    
+}
+
+.subscribe-field:focus {
+    outline: none;
+  }
+
+.subscribe-button {
+    margin-right: 1.2rem;
+    padding: 0.9rem;
+    background-color: #1A1B1C;
+    color: #FFFDFA;
+    font-weight: 500;
+    border: none;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.socials h2 {
+    font-size: 1rem;
+    padding-top: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+
+.socials-icons i {
+    font-size: 1.5rem;
+    padding: 0.6rem;
+}
+
+@media (min-width: 768px) {
+
+
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    .quick-links  {
+        gap: 0.8rem;
+        margin: 0;
+        padding: 1rem;
+       
+       
+    }
+    
+    .quick-links h3 {
+        font-size: 0.8rem;
+    }
+    
+    .quick-links li {
+        list-style-type: none;
+        font-size: 0.8rem;
+    }
+
+    .subscribe-form {
+        padding: 1.2rem;
+        flex: 0.5;
+       
+    }
+    
+    .subscribe-form h2 {
+        font-size: 1rem;
+    }
+    
+    .subscribe-form p {
+        font-size: 0.8rem;
+    }
+    
+    .subscribe-input {
+        display: flex;
+        justify-content: center;
+      
+    }
+    
+    .subscribe-field {
+        margin-right: 0.5rem;
+        padding: 0.6rem 0 0.6rem 0.2rem;
+       
+    }
+    
+    .subscribe-button {
+        margin-right: 0;
+        padding: 0.6rem ;
+        font-size: 0.7rem;
+    }
+
+    
+    .socials {
+       
+        padding-bottom: 0;
+       
+      
+    }
+    
+    .socials h2 {
+        padding-top: 0;
+    }
+    
+    
+  }
+
+  @media (min-width: 900px) {
+
+
+   }
+
+
+
