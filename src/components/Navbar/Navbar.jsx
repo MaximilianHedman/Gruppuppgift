@@ -3,28 +3,28 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [showSearch, setShowSearch] = useState(false); // State för att visa/dölja sökfält
+  const [showSearch, setShowSearch] = useState(false); 
 
-  // Funktion för att toggla sökfältets visning
+ 
   const handleSearchClick = () => {
-    setShowSearch(!showSearch); // Växlar mellan att visa och dölja sökfältet
+    setShowSearch(!showSearch); 
   };
 
-  // Funktion för att stänga sökfältet
+ 
   const handleCloseSearch = () => {
-    setShowSearch(false); // Döljer sökfältet
+    setShowSearch(false); 
   };
 
   return (
     <nav className="navbar">
-      {/* Logo */}
+    
       <div className="logo">
         <Link to="/" className="logo-link">
           SOLENIA
         </Link>
       </div>
 
-      {/* Kategorier på vänster sida (Desktop) */}
+    
       <ul className={`nav-links-desktop ${showSearch ? "hidden" : ""}`}>
         <li>
           <Link to="/womens-clothing" className="nav-link">
@@ -43,7 +43,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Ikoner på höger sida (Desktop) */}
+   
       <div className={`nav-icons-desktop ${showSearch ? "hidden" : ""}`}>
         <span
           className={`nav-icon search ${showSearch ? "hidden" : ""}`}
@@ -59,7 +59,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Sökfält (Desktop och mobil) */}
+    
       {showSearch && (
         <div className="search-input-container">
           <input type="text" className="search-input" placeholder="Search..." />
@@ -69,7 +69,7 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Ikoner för mobil */}
+     
       <div className={`nav-icons-mobile ${showSearch ? "hidden" : ""}`}>
         <Link to="/" className="nav-icon">
           <i className="fa fa-home"></i>
