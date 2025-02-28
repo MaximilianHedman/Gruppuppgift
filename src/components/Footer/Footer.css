@@ -1,12 +1,14 @@
 
+.footer {
+    background-color: #d9d7d4;
+}
 
 .footer-container {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem 0.5rem 1.5rem;
     background-color: #d9d7d4;
     font-family: 'Poppins', sans-serif;
-
 }
 
 .quick-links  {
@@ -23,7 +25,26 @@
 .quick-links li {
     list-style-type: none;
     font-size: 0.9rem;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 2px; 
 }
+
+.quick-links li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px; 
+    background-color: #1A1B1C; 
+    transition: width 0.3s ease-in-out;
+}
+
+.quick-links li:hover::after {
+    width: 100%;
+}
+
 
 .subscribe-form {
     display: flex;
@@ -51,7 +72,7 @@
     padding: 0.5rem 0 0.5rem 0.3rem;
     height: 35px;
     width: 150px;
-    border: 0.5px solid #1A1B1C;
+    border: 0.5px solid #656464;
     border-radius: 2px;
     
 }
@@ -59,6 +80,11 @@
 .subscribe-field:focus {
     outline: none;
   }
+
+  .subscribe-field::placeholder {
+    font-size: 0.7rem; 
+    color: #656464; 
+}
 
 .subscribe-button {
     font-family: 'Poppins', sans-serif;
@@ -71,6 +97,7 @@
     border: none;
     font-size: 0.8rem;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .socials {
@@ -89,7 +116,14 @@
     font-size: 1.5rem;
     padding: 0.6rem;
     padding-bottom: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
+
+.socials-icons i:hover {
+    transform: scale(1.2);
+}
+
 
 @media (min-width: 768px) {
 
@@ -98,7 +132,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 1.2rem;
+        padding: 1rem 1.2rem 0.7rem 1.2rem;
       
     }
 
@@ -123,7 +157,7 @@
 
     .socials {
         display: flex;
-       
+        
     }
 
     .socials h2 {
@@ -131,21 +165,25 @@
         text-align: center;
     }
 
-  
     
   }
 
-  @media (min-width: 900px) {
-    .footer-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding: 1.2rem 0 0.5rem 0;
-      
-    }
+  @media (min-width: 900px) { 
 
-
+   .footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.5rem 0 1rem 0;
    }
 
+   .quick-links {
+    gap: 1.5rem;
+   }
+  }
 
-
+  @media (min-width: 1200px) {
+    .quick-links {
+        gap: 2.5rem;
+       
+    }
+  }
