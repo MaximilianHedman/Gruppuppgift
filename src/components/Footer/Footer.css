@@ -45,7 +45,6 @@
     margin-bottom: 0.3rem;
 }
 
-
 .socials-icons i {
     font-size: 1.5rem;
     padding: 0.6rem;
@@ -70,8 +69,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 1rem 1.2rem 0.7rem 1.2rem;
-      
+        padding: 1rem 1.5rem 0.7rem 1.5rem;
     }
 
     .quick-links {
@@ -90,17 +88,20 @@
     
     .subscribe-form h2 {
         font-size: 0.9rem;
+        text-align: center;
     }
     
     .subscribe-form p {
         font-size: 0.8rem;
         margin-top: 0.2rem;
+        text-align: center;
     }
     
     .subscribe-input {
         padding-top: 1rem;
     }
     
+
     .subscribe-field {
         margin-right: 0.3rem;
         padding: 0.5rem 0 0.5rem 0.3rem;
@@ -108,7 +109,6 @@
         width: 150px;
         border: 0.5px solid #656464;
         border-radius: 2px;
-        
     }
     
     .subscribe-field:focus {
@@ -133,24 +133,9 @@
         border-radius: 2px;
         cursor: pointer;
     }
-    
-
-    .subscribe-form h2 {
-        text-align: center;
-    }
-
-    .subscribe-form p {
-        text-align: center;
-    }
-
-    .subscribe-field {
-        margin-left: 1rem;
-        
-    }
 
     .socials {
         display: flex;
-        
     }
 
     .socials h2 {
@@ -158,7 +143,6 @@
         text-align: center;
     }
 
-    
   }
 
   @media (min-width: 900px) { 
