@@ -1,13 +1,14 @@
 import React from "react";
 import "./ProductCard.css";
-import HeartIcon from "./HeartIcon";
+import MarkFavorite from "./MarkFavorite";
 
 const ProductCard = ({ product, onProductClick }) => {
   return (
     <div className="product-card" onClick={() => onProductClick(product.id)}>
-      <div className="icons">
-        <HeartIcon />
-
+      <div className="icons-container">
+        <div className="heart-icon-container">
+          <MarkFavorite />
+        </div>
         <button className="shopping-container">
           <span className="add-to-cart-text">ADD TO CART</span>
           <svg
