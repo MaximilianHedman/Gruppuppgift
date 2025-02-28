@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .cart-section, .order-form {
+    background: #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .product-image {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+  }
+  
+  .quantity-controls button {
+    margin: 0 20px;
+  }
+  
+  .price {
+    font-weight: bold;
+  }
+  
+  .remove-button {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+
+  .order-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid rgb(4, 187, 17);
+  }
+
+  .form-container{
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-group {
+    display: flex;
+    /*align-items: center;
+    justify-content: center;*/
+    justify-content: space-between;
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .form-group input {
+    /*flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: center;
+    flex-direction: row;*/
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+  
+  .checkout-button {
+    background: black;
+    color: white;
+    padding: 10px;
+    width: 70%;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  
+  /*.order-form button:hover {
+    background: darkgreen;
+  }*/
