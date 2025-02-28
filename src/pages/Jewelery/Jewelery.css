@@ -1,0 +1,19 @@
+.product-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px 8px;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .product-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 47px 27px;
+    padding: 2rem;
+  }
+}
