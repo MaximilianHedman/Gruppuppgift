@@ -7,20 +7,22 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     height: 3.5rem;
   }
+
   
   .logo {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
+
   
   .logo-link {
     text-decoration: none;
     font-size: 1.8rem;
     color: #1A1B1C;
     font-weight: bold;
-   
   }
+
   
   .nav-links-desktop {
     list-style-type: none;
@@ -28,10 +30,12 @@
     justify-content: flex-start;
     margin-left: 10px;
   }
+
   
   .nav-links-desktop li {
     margin: 0 0.8rem;
   }
+
   
   .nav-link {
     text-decoration: none;
@@ -39,6 +43,7 @@
     color: #1A1B1C;
     position: relative;
   }
+
   
   .nav-link::after {
     content: "";
@@ -50,6 +55,7 @@
     background-color: #1A1B1C;
     transition: width 0.3s ease-in-out;
   }
+
   
   .nav-link:hover::after {
     width: 100%;
@@ -61,22 +67,21 @@
     justify-content: flex-end;
     margin-right: 10px;
   }
+
   
   .nav-icon {
     text-decoration: none;
     cursor: pointer;
     font-size: 1.2rem;
-    
   }
   
   .nav-icon i {
     color: #1A1B1C;
-  
   }
+
 
   .search-input:focus {
     outline: none; 
-  
   }
   
   
@@ -148,6 +153,7 @@
     .navbar {
         padding: 0.5rem;
     }
+
     .nav-links-desktop {
       display: flex;
       justify-content: flex-start;
@@ -161,38 +167,36 @@
       top: 0.4rem;
       left: 50%;
       transform: translateX(-50%);
-     
     }
 
-  
     .nav-icons-desktop {
       display: flex;
       justify-content: flex-end;
       margin-right: 1rem;
       margin-left: 1rem;
       padding-bottom: 0.2rem;
-   
     }
 
     .nav-icon {
-        margin: 0 15px;
-        font-size: 1.2rem;
-        
-      }
-
+      margin: 0 15px;
+      font-size: 1.2rem; 
+    }
+      
 
     .nav-icon i {
         font-size: 1rem;
-       
     }
+
   
     .nav-icons-mobile {
       display: none; 
     }
+
   
     .nav-icons-desktop .nav-icon.search.hidden {
       display: none;
     }
+
   
     .search-input-container {
       position: absolute;
@@ -204,6 +208,7 @@
       align-items: center;
       z-index: 10;
     }
+
   
     .search-input {
       width: 100%; 
@@ -228,9 +233,9 @@
   }
 
   @media (min-width: 900px) {
+
     .search-input-container {
       width: 88%;
-     
       }
 
   }
@@ -240,7 +245,6 @@
 
     .search-input-container {
       width: 90%;
-     
       }
 
   }
