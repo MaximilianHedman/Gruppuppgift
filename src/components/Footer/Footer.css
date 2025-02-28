@@ -47,8 +47,7 @@
 
 .socials-icons i {
     font-size: 1.5rem;
-    padding: 0.6rem;
-    padding-bottom: 1.5rem;
+    padding: 0.6rem 1rem 1rem 0;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
@@ -141,6 +140,10 @@
     .socials h2 {
         padding-top: 0;
         text-align: center;
+    }
+
+    .socials-icons i {
+        padding: 0.6rem;
     }
 
   }
