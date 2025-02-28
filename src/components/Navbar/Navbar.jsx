@@ -37,7 +37,7 @@ const Navbar = () => {
         >
           <i className="fa fa-search"></i>
         </span>
-        <Link to="/favorites" className="nav-icon"><i className="fa fa-heart"></i></Link>
+        <Link to="/favorites" className="nav-icon"><i class="fa-regular fa-heart"></i></Link>
         <Link to="/shoppingcart" className="nav-icon"><i className="fa fa-shopping-cart"></i></Link>
       </div>
 
@@ -59,7 +59,7 @@ const Navbar = () => {
       <div className={`nav-icons-mobile ${showSearch ? "hidden" : ""}`}>
         <Link to="/" className="nav-icon"><i className="fa fa-home"></i></Link>
         <span className="nav-icon" onClick={handleSearchClick}><i className="fa fa-search"></i></span>
-        <Link to="/favorites" className="nav-icon"><i className="fa fa-heart"></i></Link>
+        <Link to="/favorites" className="nav-icon"><i class="fa-regular fa-heart"></i></Link>
         <Link to="/shoppingcart" className="nav-icon"><i className="fa fa-shopping-cart"></i></Link>
       </div>
     </nav>
