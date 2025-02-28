@@ -119,8 +119,33 @@ body {
     gap: 10px;
   }
 
-  .heart-icon:hover path {
-    fill: red;
+  .heartFavour {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: black;
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+  }
+
+  .heartFavour:hover {
+    color: red;
+  }
+
+  .heartFavour .fa-heart {
+    color: inherit;
+  }
+
+  .heartFavour .fa-solid {
+    color: red;
+  }
+
+  .shopping-container {
+    font-size: 24px;
+    color: black;
+    margin-left: 8px;
   }
 
   .shopping-container:hover {
