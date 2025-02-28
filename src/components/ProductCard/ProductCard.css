@@ -91,6 +91,58 @@ body {
     fill: red;
   }
 
+  .shopping-container {
+    background: none;
+    border: none;
+    padding: 0;
+    outline: none;
+  }
+
+  .shopping-container .add-to-cart-text {
+    display: none; /* Hide the text by default */
+  }
+
+  .shopping-container:hover {
+    background-color: #f0f0f0; /* Change background on hover */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    padding: 8px 10px;
+    background: none;
+    border: 3px solid black; /* Add border */
+    cursor: pointer;
+    transition: 0.3s ease; /* Smooth transition */
+  }
+
+  .shopping-container:hover .add-to-cart-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Show the text on hover */
+  }
+
+  .shopping-bag {
+    width: 24px; /* Set SVG size */
+    height: 24px;
+    margin-left: 8px; /* Space between icon and text */
+  }
+
+  .add-to-cart-text {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  /* .shopping-bag:hover path {
+    width: 177px;
+    height: 45px;
+    padding: 10px 48px 8px 12px;
+    border: 2px solid black;
+  }
+
+  .shopping-bag:hover span:after {
+    content: "ADD TO CART";
+    direction: rtl;
+  } */
+
   .product-card:hover {
     box-shadow: 3px 7px 10.2px rgba(0, 0, 0, 0.15);
   }

@@ -10,9 +10,10 @@
 @media (min-width: 768px) {
   .product-list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     gap: 47px 27px;
+    padding: 2rem;
   }
 }
