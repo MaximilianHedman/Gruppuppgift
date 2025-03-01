@@ -1,0 +1,18 @@
+.favorites-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px 8px;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .favorites-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 47px 27px;
+    }
+}
