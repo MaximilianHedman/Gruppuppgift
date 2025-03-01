@@ -24,8 +24,8 @@
   }
   
   .product-image {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     background: #fff;
   }
   
@@ -61,6 +61,11 @@
     flex-wrap: wrap;
   }
 
+  h5 {
+    font-size: 13px;
+    /*font-size: 1rem; samma storlek som h5 default*/
+  }
+
   .form-group {
     display: flex;
     /*align-items: center;
@@ -71,8 +76,19 @@
     padding: 10px;
     gap: 10px;
   }
+
+  .form-group-zip,
+  .form-group-city {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    padding: 10px;
+    gap: 10px;
+  }
   
-  .form-group input {
+  .form-group input,
+  .form-group-zip input,
+  .form-group-city input {
     /*flex-wrap: wrap;
     justify-content: space-between;
     align-self: center;
@@ -82,14 +98,14 @@
     border: 1px solid #ccc;
     border-radius: 2px;
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 10px;
   }
   
   .checkout-button {
     background: black;
     color: white;
     padding: 10px;
-    width: 70%;
+    width: 60%;
     border: none;
     cursor: pointer;
     border-radius: 2px;

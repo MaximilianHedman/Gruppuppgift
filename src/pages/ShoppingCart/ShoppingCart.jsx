@@ -55,7 +55,7 @@ const ShoppingCart = () => {
               <span>{item.quantity}</span>
               <button onClick={() => handleQuantityChange(item.id, 1)}>+</button>
             </div>
-            <span className="price">Price {item.price}€</span>
+            <span className="price">Price: {item.price}€</span>
             <button className="remove-button" onClick={() => handleRemove(item.id)}>X</button>
           </div>
         ))}
@@ -65,6 +65,7 @@ const ShoppingCart = () => {
         <h2>Shipping Information</h2>
         <form className="form-container" onSubmit={handleSubmit}>
           <div className="form-group">
+            <h5>First name:</h5>
             <input
             type="text"
             name="name"
@@ -75,6 +76,7 @@ const ShoppingCart = () => {
             />
           </div>
           <div className="form-group">
+            <h5>Last name:</h5>
             <input
             type="text"
             name="lastname"
@@ -85,16 +87,18 @@ const ShoppingCart = () => {
             />
           </div>
           <div className="form-group">
+            <h5>Address:</h5>
             <input
             type="text"
             name="address"
-            placeholder="Enter your Address"
+            placeholder="Enter your address"
             value={order.address}
             onChange={handleInputChange}
             required
             />
           </div>
-          <div className="form-group">
+          <div className="form-group-zip">
+            <h5>Zip code:</h5>
             <input
             type="text"
             name="zipcode"
@@ -104,7 +108,8 @@ const ShoppingCart = () => {
             required
             />
           </div>
-          <div className="form-group">
+          <div className="form-group-city">
+            <h5>City:</h5>
             <input
             type="text"
             name="city"
@@ -115,6 +120,7 @@ const ShoppingCart = () => {
             />
           </div>
           <div className="form-group">
+            <h5>Email:</h5>
             <input
             type="email"
             name="email"
@@ -125,6 +131,7 @@ const ShoppingCart = () => {
             />
           </div>
           <div className="form-group">
+            <h5>Phone number:</h5>
             <input
             type="text"
             name="phone"
