@@ -1,3 +1,18 @@
+:root {
+  --primary-color: #9FB3D0;   
+  --text-color: #1A1B1C; 
+  --text-color2: #464747;
+ 
+  --background-color1: #FFFDFA;
+  --background-color2: #d9d7d4; 
+  --background-color3: #E5E0D9;   
+  --background-color4: #C4BCB2;  
+  
+
+  --font-display: 'Playfair Display', serif;
+}
+
+
 * {
   margin: 0;
   padding: 0;
