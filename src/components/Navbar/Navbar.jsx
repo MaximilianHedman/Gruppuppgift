@@ -1,30 +1,32 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import { useFavorites } from "../../context/FavoritesContext";
 
 const Navbar = () => {
-  const [showSearch, setShowSearch] = useState(false); 
+  const [showSearch, setShowSearch] = useState(false);
+  const { favorites } = useFavorites();
 
- 
+
   const handleSearchClick = () => {
-    setShowSearch(!showSearch); 
+    setShowSearch(!showSearch);
   };
 
- 
+
   const handleCloseSearch = () => {
-    setShowSearch(false); 
+    setShowSearch(false);
   };
 
   return (
     <nav className="navbar">
-    
+
       <div className="logo">
         <Link to="/" className="logo-link">
           SOLENIA
         </Link>
       </div>
 
-    
+
       <ul className={`nav-links-desktop ${showSearch ? "hidden" : ""}`}>
         <li>
           <Link to="/womens-clothing" className="nav-link">
@@ -43,7 +45,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-   
+
       <div className={`nav-icons-desktop ${showSearch ? "hidden" : ""}`}>
         <span
           className={`nav-icon search ${showSearch ? "hidden" : ""}`}
@@ -51,15 +53,20 @@ const Navbar = () => {
         >
           <i className="fa fa-search"></i>
         </span>
-        <Link to="/favorites" className="nav-icon">
+
+        <Link to="/favorites" className="nav-icon favorites-icon">
           <i className="fa fa-heart"></i>
+          {favorites.length > 0 && (
+            <span className="favorites-count">{favorites.length}</span>
+          )}
         </Link>
+
         <Link to="/shoppingcart" className="nav-icon">
           <i className="fa fa-shopping-cart"></i>
         </Link>
       </div>
 
-    
+
       {showSearch && (
         <div className="search-input-container">
           <input type="text" className="search-input" placeholder="Search..." />
@@ -69,7 +76,7 @@ const Navbar = () => {
         </div>
       )}
 
-     
+
       <div className={`nav-icons-mobile ${showSearch ? "hidden" : ""}`}>
         <Link to="/" className="nav-icon">
           <i className="fa fa-home"></i>
@@ -77,9 +84,14 @@ const Navbar = () => {
         <span className="nav-icon" onClick={handleSearchClick}>
           <i className="fa fa-search"></i>
         </span>
-        <Link to="/favorites" className="nav-icon">
+
+        <Link to="/favorites" className="nav-icon favorites-icon">
           <i className="fa fa-heart"></i>
+          {favorites.length > 0 && (
+            <span className="favorites-count">{favorites.length}</span>
+          )}
         </Link>
+
         <Link to="/shoppingcart" className="nav-icon">
           <i className="fa fa-shopping-cart"></i>
         </Link>

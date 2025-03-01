@@ -83,7 +83,27 @@
   .search-input:focus {
     outline: none; 
   }
-  
+
+  /* Favorites count badge */
+.favorites-icon {
+  position: relative;
+}
+
+.favorites-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 0.8rem;
+  height: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
   
   /* För mobilvyn */
   @media (max-width: 768px) {

@@ -1,10 +1,17 @@
 import React, { useState } from "react";
+import { useFavorites } from "../../context/FavoritesContext"; // Import Favorites Context
 import "./ProductCard.css";
 
 const ProductCard = ({ product, onProductClick }) => {
-  const [liked, setLiked] = useState(false);
-  const handleHeartClick = () => {
+  const { favorites, toggleFavorite } = useFavorites();
+  const isFavorite = favorites.some((fav) => fav.id === product.id);
+
+  const [liked, setLiked] = useState(isFavorite);
+
+  const handleHeartClick = (e) => {
+    e.stopPropagation(); // Prevents triggering onProductClick
     setLiked(!liked);
+    toggleFavorite(product);
   };
 
   return (
