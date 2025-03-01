@@ -1,15 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
-  const [reviews, setReviews] = useState([]);
+  const navigate = useNavigate();
+
   const handleCategoryClick = (category) => {
-    console.log("Clicked category:", category);
-    // Navigation till kategorin du klickar på
+    if (category === "women") {
+      navigate("/womens-clothing");
+    } else if (category === "men") {
+      navigate("/mens-clothing");
+    } else if (category === "jewelery") {
+      navigate("/jewelery");
+    }
   };
+
   const handleLearnMoreClick = () => {
-    console.log("Learn More clicked!");
-    // Navigation till smycken
+    navigate("/jewelery");
   };
 
   return (
@@ -22,6 +29,7 @@ const Home = () => {
           everyday life.
         </p>
       </section>
+
       <div className="categories-h2">
         <h2>CATEGORIES</h2>
       </div>
