@@ -3,60 +3,94 @@ import "./Home.css";
 
 const Home = () => {
   const [reviews, setReviews] = useState([]);
+  const handleCategoryClick = (category) => {
+    console.log("Clicked category:", category);
+    // Navigation till kategorin du klickar på
+  };
+  const handleLearnMoreClick = () => {
+    console.log("Learn More clicked!");
+    // Navigation till smycken
+  };
 
   return (
     <div className="home">
       <section className="hero">
-        <h1>STYLE THAT LASTS DESIGNED FOR YOU</h1>
-        <p>Carefully curated products for a modern lifestyle.</p>
+        <h1>SOLENIA</h1>
+        <h2>TIMELESS PIECES THAT COMBINE CLASSIC AND MODERN DESIGNS.</h2>
+        <p>
+          Essentials that combine style and function perfect for the demands of
+          everyday life.
+        </p>
       </section>
+      <div className="categories-h2">
+        <h2>CATEGORIES</h2>
+      </div>
 
       <section className="categories">
-        {["women", "men", "jewelery"].map((category) => (
+        {["women", "jewelery", "men"].map((category) => (
           <div key={category} className="category-container">
-            <h3 className="category-title">
-              {category.charAt(0).toUpperCase() + category.slice(1)}
-            </h3>
             <button
               className={`category-item ${category}`}
               onClick={() => handleCategoryClick(category)}
-            ></button>
+            >
+              <h3 className="category-title">
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </h3>
+            </button>
           </div>
         ))}
       </section>
 
       <section className="middle-part">
-        <h2>SOPHISTICATED MINIMALISTIC TIMELESS</h2>
+        <h2>SOPHISTICATED. MINIMALISTIC. TIMELESS.</h2>
         <p>Style meets innovation. Fashion designed for modern living.</p>
       </section>
 
       <section className="jewelry">
         <div className="image-section"></div>
         <div className="text-section">
-          <h3>Jewelry that completes your look. Subtle yet unforgettable.</h3>
-          <button className="learn-more">LEARN MORE</button>
+          <h3>
+            Our jewelry collection adds the perfect touch to your look. Subtle
+            yet unforgettable details that elevate your style.
+          </h3>
+          <button className="learn-more" onClick={handleLearnMoreClick}>
+            LEARN MORE
+          </button>
         </div>
       </section>
 
       <section className="reviews">
-        <h3>Trusted by Thousands of Happy Customers</h3>
-        <p>Here´s what our costumers say about us.</p>
+        <h3>THOUSANDS OF HAPPY CUSTOMERS</h3>
+        <h4>Our reviews on SOLENIA</h4>
         {[
           {
             id: 1,
-            text: "Wow... I am very happy to buy this product...",
-            rating: "4.5 ",
+            name: "Jenny L.",
+            text: "I absolutely love the quality of the fabrics! The design is modern but timeless. Highly recommend!",
+            rating: "4.5",
           },
-          { id: 2, text: "Amazing quality and fast delivery!", rating: "5 " },
+          {
+            id: 2,
+            name: "James R.",
+            text: "The shirts are stylish and the fit is just right. Great for both casual and business occasions.",
+            rating: "5",
+          },
           {
             id: 3,
-            text: "The best purchase I have ever made!",
-            rating: "4.8 ",
+            name: "Zara M.",
+            text: "Beautiful and delicate pieces! I bought a ring, and it's become my everyday accessory. Love it!",
+            rating: "4.8",
           },
-        ].map((review) => (
-          <div key={review.id} className="review">
-            <p>{review.text}</p>
-            <span>{review.rating}</span>
+        ].map((review, index) => (
+          <div key={review.id} className={`review review-${index + 1}`}>
+            <div className="review-image"></div>
+            <div className="review-content">
+              <span className="review-rating">
+                <span className="review-name">{review.name}</span>{" "}
+                {review.rating}
+              </span>
+              <p className="review-text">{review.text}</p>
+            </div>
           </div>
         ))}
       </section>
