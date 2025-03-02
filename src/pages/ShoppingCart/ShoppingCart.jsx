@@ -55,7 +55,7 @@ const ShoppingCart = () => {
               <span>{item.quantity}</span>
               <button onClick={() => handleQuantityChange(item.id, 1)}>+</button>
             </div>
-            <span className="price">Price: {item.price}€</span>
+            <div className="price">Price: {item.price}€</div>
             <button className="remove-button" onClick={() => handleRemove(item.id)}>X</button>
           </div>
         ))}
@@ -97,7 +97,8 @@ const ShoppingCart = () => {
             required
             />
           </div>
-          <div className="form-group-zip">
+          <div className="zip-city">
+          <div className="form-group">
             <h5>Zip code:</h5>
             <input
             type="text"
@@ -108,7 +109,7 @@ const ShoppingCart = () => {
             required
             />
           </div>
-          <div className="form-group-city">
+          <div className="form-group">
             <h5>City:</h5>
             <input
             type="text"
@@ -118,6 +119,7 @@ const ShoppingCart = () => {
             onChange={handleInputChange}
             required
             />
+          </div>
           </div>
           <div className="form-group">
             <h5>Email:</h5>
@@ -142,8 +144,8 @@ const ShoppingCart = () => {
             />
           </div>
         </form>
+        <button type="submit" className="checkout-button">CHECK OUT</button>
       </div>
-      <button type="submit" className="checkout-button">CHECK OUT</button>
     </div>
   );
 };
