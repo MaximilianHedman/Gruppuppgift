@@ -2,6 +2,10 @@ body {
   font-size: 12px;
 }
 
+i {
+  font-size: 19px;
+}
+
 .product-card {
   width: 181px;
   height: 327px;
@@ -16,7 +20,6 @@ body {
   overflow: hidden;
   margin: 0;
   flex: 0 0 auto;
-  cursor: pointer;
 }
 
 .icons-container {
@@ -24,12 +27,22 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  padding-bottom: 27px;
+  padding-bottom: 15px;
 }
 
 .heart-icon-container {
   display: flex;
   align-items: center;
+}
+
+.heartFavour {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.heartFavour .fa-solid {
+  color: red;
 }
 
 .shopping-container {
@@ -39,28 +52,19 @@ body {
   background: none;
   padding: 10px 5px;
   border: none;
-  cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
-  outline: none;
-  max-width: 34px;
-  -webkit-transition: max-width 0.5s;
-  transition: max-width 1s;
 }
 
 .shopping-container .add-to-cart-text {
   display: none;
   padding-right: 15px;
-
 }
 
 .shopping-bag {
-  width: 24px;
-  height: 24px;
+  font-size: 24px;
 }
 
 .product-image {
-  width: 144px;
+  width: 130px;
   height: 181px;
   display: flex;
   justify-content: center;
@@ -91,6 +95,11 @@ body {
     font-size: 16px;
   }
 
+  i {
+    font-size: 20px;
+  }
+
+
   .product-card {
     width: 400px;
     height: 600px;
@@ -100,43 +109,33 @@ body {
   }
 
   .icons-container {
-    padding-bottom: 102px;
+    padding-bottom: 40px;
   }
 
   .product-image {
-    width: 235px;
+    width: 250px;
     height: 295px;
     padding: 13px 0px;
-    padding-bottom: 100px;
+    padding-bottom: 0px;
   }
 
   .product-info {
-    padding-top: 12px;
+    margin-top: 40px;
     text-align: left;
-    align-self: flex-start;
     padding: 0px 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
 
   .heartFavour {
-    font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     color: black;
-    transition: color 0.3s ease;
-    /* Smooth color transition */
   }
 
   .heartFavour:hover {
     color: red;
-  }
-
-  .heartFavour .fa-heart {
-    color: inherit;
   }
 
   .heartFavour .fa-solid {
@@ -144,20 +143,25 @@ body {
   }
 
   .shopping-container {
-    font-size: 24px;
     color: black;
     margin-left: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    outline: none;
+    max-width: 34px;
+    -webkit-transition: max-width 0.5s;
+    transition: max-width 1s;
   }
 
   .shopping-container:hover {
     outline: 2px solid black;
-
   }
 
   .shopping-container:hover .add-to-cart-text {
     display: inline-block;
-    font-size: 16px;
-    padding: 6px 5px 0px 0px;
+    font-size: 14px;
+    padding: 3px 5px 0px 0px;
     opacity: 1;
     margin-left: 8px;
   }
@@ -166,7 +170,6 @@ body {
     outline: 2px solid black;
     max-width: 170px;
   }
-
 
   .product-card:hover {
     box-shadow: 3px 7px 10.2px rgba(0, 0, 0, 0.15);
