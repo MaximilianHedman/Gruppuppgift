@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.home {
+  text-align: start;
+  background-color: #F7F6F4;
+  color: #333;
+  text-shadow: #333;
+  
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("./Bilder-homepage/homepage.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+  color: #D9D7D4;
+  padding: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+ 
+}
+
+.hero h1 {
+  width: 100%;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.hero p {
+  font-size: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  padding: 70px;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.category-title {
+  font-weight: bold;
+  padding: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase; 
+  font-size: 1.2rem; 
+  text-align: center; 
+}
+
+.category-item {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.women {
+  background-image: url("/Bilder-homepage/women.jpeg");
+}
+
+.men {
+  background-image: url("/Bilder-homepage/men.jpeg");
+}
+
+.jewelery {
+  background-image: url("/Bilder-homepage/jewelery.jpeg");
+}
+
+.category-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.middle-part {
+  position: relative;
+  background-image: url("./Bilder-homepage/mitten.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.middle-part h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  top: 10%;
+}
+
+.middle-part p {
+  font-size: 1rem;
+  top: 30%;
+}
+
+.jewelry {
+  display: flex;
+  height: 400px;
+}
+
+.text-section {
+  flex: 1;
+  background-color: #c7bcb3;
+  color: #413f3d;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text-section h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.text-section .learn-more {
+  margin-top: 15px;
+  padding: 15px 40px;
+  background-color: #c7bcb3;
+  color: #413f3d;
+  font-weight: 550;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.text-section .learn-more:hover {
+  background-color: #aca196;
+}
+
+.image-section {
+  flex: 1;
+  background-image: url("./Bilder-homepage/rings.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.review {
+  background: #9fb3d0;
+  padding: 15px;
+  margin: 10px auto;
+  width: 60%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+.review p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.review span {
+  font-weight: bold;
+  color: #413f3d;
+}
+@media (max-width: 430px) {
+}
