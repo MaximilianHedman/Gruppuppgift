@@ -29,9 +29,9 @@ const Jewelery = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div className="store">
+    <div className="page-wrapper">
       <h1>Jewelery</h1>
-      <div className="product-list">
+      <div className="product-container">
         {products.map((product) => (
           <ProductCard
             key={product.id}

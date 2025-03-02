@@ -1,3 +1,18 @@
+:root {
+  --primary-color: #9FB3D0;   
+  --text-color: #1A1B1C; 
+  --text-color2: #464747;
+ 
+  --background-color1: #FFFDFA;
+  --background-color2: #d9d7d4; 
+  --background-color3: #E5E0D9;   
+  --background-color4: #C4BCB2;  
+  
+
+  --font-display: 'Playfair Display', serif;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +20,41 @@
 }
 
 body, html, #root {
+  background-color:#FFFDFA ;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   font-family: 'Poppins', sans-serif;
+  min-width: 425px;
 }
 
 footer {
   margin-top: auto;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 0 2rem 0;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .page-wrapper {
+    padding: 2rem;
+  }
+  .product-container {
+    gap: 3rem 1.7rem;
+  }
 }
