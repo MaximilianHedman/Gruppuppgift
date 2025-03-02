@@ -1,12 +1,13 @@
 
 .footer {
     background-color: #d9d7d4;
+  
 }
 
 .footer-container {
     display: flex;
     flex-direction: column;
-    padding: 2rem 1.5rem 0.5rem 1.5rem;
+    padding: 2rem 1.5rem 4.5rem 1.5rem;
     background-color: #d9d7d4;
     font-family: 'Poppins', sans-serif;
 }
