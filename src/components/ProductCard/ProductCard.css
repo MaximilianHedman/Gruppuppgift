@@ -9,7 +9,6 @@ body {
   border: 0.94px solid rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
   padding: 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

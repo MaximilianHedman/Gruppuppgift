@@ -37,19 +37,19 @@ const ProductDetails = () => {
                    
                     <div className="product-image-container">
                         <img src={product.image} alt={product.title} className="product-image" />
-                        <button className="wishlist-btn">♡</button>
-                        <button className="cart-btn">🛍</button>
+                        <button className="wishlist-btn"></button>
+                        <button className="cart-btn"></button>
                     </div>
 
                   
                     <div className="product-info">
     <h1 className="product-title">{product.title}</h1>
-    <p className="product-price">Price: {product.price ? `${product.price}` : "Not available"}</p>
+    <p className="product-price">Price: ${product.price ? `${product.price}` : "Not available"}</p>
 
     <div className="product-options">
       
         <div className="option">
-            <p> Colour</p>
+            <p>Colour</p>
             <div>
                 {
                     

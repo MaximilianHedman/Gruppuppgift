@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from 'prop-types';
 import "./ProductCard.css";
 import HeartIcon from "./HeartIcon";
 
@@ -7,7 +7,6 @@ const ProductCard = ({ product, onProductClick }) => {
     <div className="product-card" onClick={() => onProductClick(product.id)}>
       <div className="icons">
         <HeartIcon />
-
         <button className="shopping-container">
           <span className="add-to-cart-text">ADD TO CART</span>
           <svg
@@ -32,6 +31,16 @@ const ProductCard = ({ product, onProductClick }) => {
       </div>
     </div>
   );
+};
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+  }).isRequired,
+  onProductClick: PropTypes.func.isRequired,
 };
 
 export default ProductCard;
