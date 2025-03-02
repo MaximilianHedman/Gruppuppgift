@@ -51,12 +51,12 @@ const ShoppingCart = () => {
           <div key={item.id} className="cart-item">
             <div className="product-image"></div>
             <div className="quantity-controls">
-              <button onClick={() => handleQuantityChange(item.id, -1)}>-</button>
+              <button onClick={() => handleQuantityChange(item.id, -1)}><i class="fa-solid fa-minus"></i></button>
               <span>{item.quantity}</span>
-              <button onClick={() => handleQuantityChange(item.id, 1)}>+</button>
+              <button onClick={() => handleQuantityChange(item.id, 1)}><i class="fa-solid fa-plus"></i></button>
             </div>
             <div className="price">Price: {item.price}€</div>
-            <button className="remove-button" onClick={() => handleRemove(item.id)}>X</button>
+            <button className="remove-button" onClick={() => handleRemove(item.id)}><i class="fa-solid fa-xmark"></i></button>
           </div>
         ))}
       </div>
@@ -97,8 +97,7 @@ const ShoppingCart = () => {
             required
             />
           </div>
-          <div className="zip-city">
-          <div className="form-group">
+          <div className="form-group-zip">
             <h5>Zip code:</h5>
             <input
             type="text"
@@ -109,7 +108,7 @@ const ShoppingCart = () => {
             required
             />
           </div>
-          <div className="form-group">
+          <div className="form-group-city">
             <h5>City:</h5>
             <input
             type="text"
@@ -119,7 +118,6 @@ const ShoppingCart = () => {
             onChange={handleInputChange}
             required
             />
-          </div>
           </div>
           <div className="form-group">
             <h5>Email:</h5>
