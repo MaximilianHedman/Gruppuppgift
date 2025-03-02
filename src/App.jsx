@@ -10,12 +10,14 @@ import Favorites from "./pages/Favorites/Favorites";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import ThankYouCard from "./pages/ThankYouCard/ThankYouCard";
 
 const App = () => {
 
     return (
         <Router>
             <Navbar />
+           
 
             <Routes>
                 <Route path='/' element={<Home />} />
@@ -27,6 +29,8 @@ const App = () => {
                 <Route path='/favorites' element={<Favorites />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/contact' element={<Contact />} />
+                <Route path='/thankyoucard' element={<ThankYouCard />} />
+
             </Routes>
 
             <Footer />
