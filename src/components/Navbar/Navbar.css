@@ -4,6 +4,7 @@
     align-items: center;
     position: relative;
     width: 100%;
+    background-color: #FFFDFA;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     height: 3.5rem;
   }
@@ -13,6 +14,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 0.4rem;
   }
 
   
@@ -125,14 +127,14 @@
       z-index: 10;
       border: none;
       border-radius: 22px;
-      color: #FFFDFA;
+      background-color: #FFFDFA;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       padding: 10px 0 12px 0;
     }
 
     .logo {
       position: absolute;
-      top: 10px;
+      top: 5px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -184,7 +186,7 @@
   
     .logo {
       position: absolute;
-      top: 0.4rem;
+      top: 0.2rem;
       left: 50%;
       transform: translateX(-50%);
     }
