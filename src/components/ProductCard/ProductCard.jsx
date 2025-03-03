@@ -15,7 +15,7 @@ const ProductCard = ({ product, onProductClick }) => {
   };
 
   return (
-    <div className="product-card" onClick={() => onProductClick(product.id)}>
+    <div className="card" onClick={() => onProductClick(product.id)}>
       <div className="icons-container">
         <div className="heart-icon-container">
           <button className="heartFavour" onClick={handleHeartClick}>
@@ -28,11 +28,11 @@ const ProductCard = ({ product, onProductClick }) => {
         </button>
       </div>
 
-      <div className="product-image">
+      <div className="card-image">
         <img src={product.image} alt={product.title} />
       </div>
 
-      <div className="product-info">
+      <div className="card-info">
         <p className="title">{product.title}</p>
         <p className="price">${product.price}</p>
       </div>
