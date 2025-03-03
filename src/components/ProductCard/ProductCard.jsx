@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { useFavorites } from "../../context/FavoritesContext"; // Import Favorites Context
 import "./ProductCard.css";
+
 
 const ProductCard = ({ product, onProductClick }) => {
   const { favorites, toggleFavorite } = useFavorites();
@@ -15,9 +17,12 @@ const ProductCard = ({ product, onProductClick }) => {
 
   return (
     <div className="product-card" onClick={() => onProductClick(product.id)}>
-      <div className="icons">
-        <HeartIcon />
-
+      <div className="icons-container">
+        <div className="heart-icon-container">
+          <button className="heartFavour" onClick={handleHeartClick}>
+            <i className={`fa-heart ${liked ? "fa-solid" : "fa-regular"}`}></i>
+          </button>
+        </div>
         <button className="shopping-container">
           <span className="add-to-cart-text">ADD TO CART</span>
           <i className="fa fa-shopping-bag"></i>
@@ -34,16 +39,6 @@ const ProductCard = ({ product, onProductClick }) => {
       </div>
     </div>
   );
-};
-
-ProductCard.propTypes = {
-  product: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    image: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-  }).isRequired,
-  onProductClick: PropTypes.func.isRequired,
 };
 
 export default ProductCard;
