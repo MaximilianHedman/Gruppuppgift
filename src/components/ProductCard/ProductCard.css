@@ -1,12 +1,12 @@
 body {
   font-size: 12px;
 }
-
 i {
   font-size: 19px;
 }
 
-.card {
+/* Default ProductCard Styling (used everywhere else) */
+.product-card {
   width: 181px;
   height: 327px;
   background-color: #ffffff;
@@ -22,6 +22,20 @@ i {
   flex: 0 0 auto;
 }
 
+/* ProductCard inside ProductDetails (Different Styling) */
+.product-card-details {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+/* Hide product-info inside ProductDetails*/
+.product-card-details .product-info {
+  display: none;
+}
 .icons-container {
   display: flex;
   justify-content: space-between;
@@ -29,22 +43,18 @@ i {
   width: 90%;
   padding-bottom: 15px;
 }
-
 .heart-icon-container {
   display: flex;
   align-items: center;
 }
-
 .heartFavour {
   background: none;
   border: none;
   padding: 0;
 }
-
 .heartFavour .fa-solid {
   color: red;
 }
-
 .shopping-container {
   display: flex;
   align-items: center;
@@ -53,31 +63,26 @@ i {
   padding: 10px 5px;
   border: none;
 }
-
 .shopping-container .add-to-cart-text {
   display: none;
   padding-right: 15px;
 }
-
 .shopping-bag {
   font-size: 24px;
 }
-
-.card-image {
+.product-image {
   width: 130px;
   height: 181px;
   display: flex;
   justify-content: center;
   overflow: hidden;
 }
-
-.card-image img {
+.product-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-
-.card-info {
+.product-info {
   padding-top: 12px;
   text-align: left;
   align-self: flex-start;
@@ -85,47 +90,38 @@ i {
   flex-direction: column;
   gap: 5px;
 }
-
 .price {
   font-weight: 600;
 }
-
 @media (min-width: 768px) {
   body {
     font-size: 16px;
   }
-
   i {
     font-size: 20px;
   }
-
-
-  .card {
+  .product-card {
     width: 400px;
     height: 600px;
     padding: 25px;
     flex: 0 0 auto;
     transition: box-shadow 0.3s ease-in-out;
   }
-
   .icons-container {
     padding-bottom: 40px;
   }
-
-  .card-image {
+  .product-image {
     width: 250px;
     height: 295px;
     padding: 13px 0px;
     padding-bottom: 0px;
   }
-
-  .card-info {
+  .product-info {
     margin-top: 40px;
     text-align: left;
     padding: 0px 25px;
     gap: 8px;
   }
-
   .heartFavour {
     background: none;
     border: none;
@@ -133,15 +129,12 @@ i {
     padding: 0;
     color: black;
   }
-
   .heartFavour:hover {
     color: red;
   }
-
   .heartFavour .fa-solid {
     color: red;
   }
-
   .shopping-container {
     color: black;
     margin-left: 8px;
@@ -153,11 +146,9 @@ i {
     -webkit-transition: max-width 0.5s;
     transition: max-width 1s;
   }
-
   .shopping-container:hover {
     outline: 2px solid black;
   }
-
   .shopping-container:hover .add-to-cart-text {
     display: inline-block;
     font-size: 14px;
@@ -165,13 +156,11 @@ i {
     opacity: 1;
     margin-left: 8px;
   }
-
   .shopping-container:hover {
     outline: 2px solid black;
     max-width: 170px;
   }
-
-  .card:hover {
+  .product-card:hover {
     box-shadow: 3px 7px 10.2px rgba(0, 0, 0, 0.15);
   }
 }

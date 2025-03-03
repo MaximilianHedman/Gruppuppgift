@@ -1,21 +1,14 @@
-/* Main container - Mobile First */
 .product-details-container {
   display: flex;
   flex-direction: column;
-  /* Stack items vertically */
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #FAF7F2;
   padding: 15px;
 }
-/* ProductCard and Info wrapper */
-.details-product-card-container {
+.product-details-card {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  
-  /* Stack card and info in mobile */
   background: white;
   padding: 15px;
   border-radius: 10px;
@@ -23,58 +16,48 @@
   max-width: 100%;
   width: 100%;
   gap: 15px;
-  /* Space between card and details */
 }
-/* Ensure ProductCard takes full width */
-.product-card {
+.product-details-info {
   width: 100%;
-}
-/* Hide product-info inside ProductCard when in ProductDetails */
-.details-product-card-container .product-card .product-info {
-  display: none;
-}
-/* Product Information Section */
-.product-info {
-  max-width: 100%;
   padding: 15px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-/* Title */
-.product-title {
+.product-details-title {
   font-size: 20px;
   font-weight: bold;
 }
-/* Price */
-.product-price  {
-  font-size: 16px;
+.product-details-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
 }
-/* Options Section */
-.details-product-options {
+.product-details-options {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin: 15px 0;
 }
-/* Option boxes */
-.option {
+.product-details-option {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
 }
-.option-box,
-.option-box-color {
+.product-details-option-box,
+.product-details-option-box-color {
   border: 1px solid black;
   padding: 10px;
   text-align: center;
   cursor: pointer;
   margin: 5px;
 }
-.option-box-color {
+.product-details-option-box-color {
   padding: 5px 15px;
 }
-/* Add to Cart Button */
-.add-to-cart {
+.product-details-add-to-cart {
   background-color: black;
   color: white;
   padding: 12px;
@@ -84,13 +67,11 @@
   margin-top: 10px;
   transition: background-color 0.3s;
   width: 100%;
-  /* Full width button */
 }
-.add-to-cart:hover {
+.product-details-add-to-cart:hover {
   background-color: #333;
 }
-/* Description Section */
-.product-description summary {
+.product-details-description summary {
   cursor: pointer;
   margin-top: 10px;
   background-color: #FFFFFF;
@@ -100,72 +81,37 @@
   border: 1px solid black;
   font-weight: bold;
 }
-.product-description {
-  width: 100%;
-  max-height: 200px;  /* Limita la altura de la descripción */
-  overflow-y: auto;   /* Agrega desplazamiento si el texto es muy largo */
-  padding: 10px;
-  background-color: #fff;
+.product-details-description p {
+  margin-top: 5px;
 }
-.option-box,
-.option-box-color {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    margin: 5px;
-    background-color: white;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.option-box:hover,
-.option-box-color:hover {
-    background-color: lightgray;
-}
-
-.option-box.selected,
-.option-box-color.selected {
-    background-color: black;
-    color: white;
-    transform: scale(1.1);
-}
-
-/* ============ TABLET STYLES (768px and up) ============ */
 @media (min-width: 768px) {
-  .details-product-card-container {
+  .product-details-card {
       flex-direction: row;
-      /* Place ProductCard and Info side by side */
       max-width: 700px;
   }
-  .product-card {
-      width: 50%;
-      /* Give it half the space */
-  }
-  .product-info {
+  .product-details-info {
       width: 50%;
       text-align: left;
   }
-  .option {
+  .product-details-option {
       align-items: flex-start;
   }
-  .add-to-cart {
+  .product-details-add-to-cart {
       width: auto;
-      /* Remove full-width on larger screens */
   }
 }
-/* ============ DESKTOP STYLES (1024px and up) ============ */
 @media (min-width: 1024px) {
-  .details-product-card-container {
+  .product-details-card {
       max-width: 900px;
       gap: 20px;
   }
-  .product-title {
+  .product-details-title {
+      font-size: 24px;
+  }
+  .product-details-price {
       font-size: 20px;
   }
-  .product-price {
-      font-size: 15px;
-  }
-  .add-to-cart {
+  .product-details-add-to-cart {
       font-size: 18px;
   }
 }
