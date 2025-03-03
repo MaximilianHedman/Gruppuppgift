@@ -52,7 +52,7 @@ const ShoppingCart = () => {
             <div className="product-image"></div>
             <div className="quantity-controls">
               <button onClick={() => handleQuantityChange(item.id, -1)}><i class="fa-solid fa-minus"></i></button>
-              <span>{item.quantity}</span>
+              <span className="quantity-nr">{item.quantity}</span>
               <button onClick={() => handleQuantityChange(item.id, 1)}><i class="fa-solid fa-plus"></i></button>
             </div>
             <div className="price">Price: {item.price}€</div>

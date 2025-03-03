@@ -7,7 +7,7 @@
   }
 
   .cart-section, .order-form {
-    background: rgba(245, 245, 245, 1);
+    background: #e6e2dc88;
     padding: 20px;
     border-radius: 8px;
     width: 100%;
@@ -19,14 +19,15 @@
   .cart-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px;
-    /*border-bottom: 1px solid #ccc; dela upp produkter?*/
+    border-bottom: 1px solid #ccc;
+    gap: 7rem;
   }
   
   .product-image {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background: #fff;
     border: 0.5px solid rgb(69, 66, 66);
     border-radius: 0;
@@ -34,9 +35,11 @@
   
   .quantity-controls {
     border: 1px solid black;
-    /*padding: 0.8rem;*/
-    padding: 0.1rem 2.5rem;
+    width: 200px;
+    height: 50px;
     box-shadow: 0 3px 6px rgba(46, 45, 45, 0.5);
+    background-color: white;
+    text-align: center;
   }
 
   .quantity-controls button {
@@ -44,16 +47,21 @@
     padding: 10px;
     background: none;
     border: none;
-    /* font awesome ikoner för - och + */
+    background-color: white;
+    padding-top: 0.8rem;
+  }
+
+  .quantity-nr {
+    font-size: 1rem;
+    font-weight: 600;
   }
   
   .price {
-    font-weight: normal;
-    /*font-weight: bold; ser inte lika bra ut imo*/
+    font-weight: 500;
     border: 1px solid rgb(69, 66, 66);
     /*width: 170px;
     height: 40px;*/
-    padding: 0.7rem 3rem;
+    padding: 0.7rem 3.5rem;
     background: #fff;
     display: flex;
     align-items: center;
@@ -76,19 +84,21 @@
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    border: 1px solid rgb(4, 187, 17);
+    /*border: 1px solid rgb(4, 187, 17); grön*/
     box-shadow: 0 3px 6px rgba(46,45,45,0.5);
   }
 
   .form-container{
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 
   h5 {
-    font-size: 13px;
-    /*font-size: 1rem; samma storlek som h5 default*/
+    font-size: 0.8rem;
+    font-weight: 600;
   }
 
   .form-group {
@@ -100,7 +110,7 @@
     width: 50%;
     margin-bottom: 10px;
     padding: 10px;
-    gap: 10px;
+    gap: 5px;
   }
 
   .form-group-zip,
@@ -122,11 +132,11 @@
     border: 1px solid #8e8888;
     border-radius: 2px;
     margin-top: 10px;
-    width: 100%;
+    width: 75%;
     font-size: 10px;
   }
 
-  ./*zip-city {
+  /*zip-city {
     width: 100%;
     display: flex;
     flex-direction: column;
