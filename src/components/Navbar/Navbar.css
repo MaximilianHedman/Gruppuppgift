@@ -7,6 +7,7 @@
   background-color: #FFFDFA;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: 3.5rem;
+
 }
 
 
@@ -86,7 +87,7 @@
   outline: none;
 }
 
-/* Favorites count badge */
+
 .favorites-icon {
   position: relative;
 }
@@ -95,7 +96,7 @@
   position: absolute;
   top: -2px;
   right: -8px;
-  background-color: red;
+  background-color: rgb(240, 107, 107);
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -178,7 +179,12 @@
 
   .navbar {
     padding: 2rem 0.5rem;
-    background-color:#FFFDFA ;
+    background-color:#FFFDFA;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+   
   }
 
   .nav-links-desktop {
