@@ -23,7 +23,7 @@ const Home = () => {
     <div className="home">
       <section className="hero">
         <h1>SOLENIA</h1>
-        <h2>TIMELESS PIECES THAT COMBINE CLASSIC AND MODERN DESIGNS.</h2>
+        <h2>TIMELESS PIECES THAT COMBINE CLASSIC AND MODERN DESIGNS</h2>
         <p>
           Essentials that combine style and function perfect for the demands of
           everyday life.
@@ -68,25 +68,28 @@ const Home = () => {
       </section>
 
       <section className="reviews">
-        <h3>THOUSANDS OF HAPPY CUSTOMERS</h3>
-        <h4>Our reviews on SOLENIA</h4>
+        <h3>Trusted by Thousands of Happy Customer</h3>
+        <h4>
+          Real experiences and real voices. See what our customers say about
+          SOLENIA!
+        </h4>
         {[
           {
             id: 1,
             name: "Jenny L.",
-            text: "I absolutely love the quality of the fabrics! The design is modern but timeless. Highly recommend!",
+            text: "I absolutely love the quality of the fabrics! Highly recommend!",
             rating: "4.5",
           },
           {
             id: 2,
             name: "James R.",
-            text: "The shirts are stylish and the fit is just right. Great for both casual and business occasions.",
+            text: "The shirts are stylish and the fit is just right. Great!",
             rating: "5",
           },
           {
             id: 3,
             name: "Zara M.",
-            text: "Beautiful and delicate pieces! I bought a ring, and it's become my everyday accessory. Love it!",
+            text: "Beautiful and delicate pieces! I bought a ring. Love it!",
             rating: "4.8",
           },
         ].map((review, index) => (
