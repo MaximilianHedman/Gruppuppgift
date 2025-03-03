@@ -46,7 +46,7 @@ const ProductDetails = () => {
                     <ProductCard product={product} onProductClick={() => { }} />
 
                     {/* Product Details */}
-                    <div className="product-info">
+                    <div className="details-product-options">
                         <h1 className="product-title">{product.title}</h1>
                         <p className="product-price">
                             <strong>Price:</strong> $ {product.price ? `${product.price}` : "Not available"}
