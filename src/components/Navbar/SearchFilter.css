@@ -1,0 +1,18 @@
+/* If you want separate styles for the filter area, put them here: */
+
+.filters-container {
+    /* Put whatever container styling you need */
+    margin-top: 20px;
+}
+
+.filter-section {
+    margin-top: 10px;
+}
+
+.filter-label {
+    margin-right: 10px;
+}
+
+.filtered-product-list {
+    margin-top: 20px;
+}
