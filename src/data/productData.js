@@ -5,7 +5,7 @@ export const productData = {
         size: "One Size" },
 
     // Mens Casual Premium Slim Fit T-Shirts
-    2: { color: "Silver", 
+    2: { color: "Silver", color1: "Blue", 
         sizeS: "S", sizeM: "M", sizeL: "L", sizeXl: "XL"},
 
     // Mens Cotton Jacket
@@ -13,7 +13,7 @@ export const productData = {
         sizeM: "M",  sizeL: "L", sizeXl: "XL" },
 
     // Mens Casual Slim Fit
-    4: { color: "Purple",color1: "Blue",color2: "Black",color3: "orange", 
+    4: { color: "Purple",color1: "Blue",color2: "Black",color3: "Orange", 
         sizeXs: "XS", sizeS: "S", sizeM: "M", sizeL: "L" ,sizeXl: "XL" },
 
     // ___Jewelery__
@@ -35,7 +35,7 @@ export const productData = {
 
     // __Womens Clothing__
     // BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats
-    15: {color: "Purple",color1: "Blue",color2: "Rosa",color3: "orange", 
+    15: {color: "Purple",color1: "Blue",color2: "Rosa",color3: "Orange", 
         sizeXs: "XS", sizeS: "S", sizeM: "M", sizeL: "L" ,sizeXl: "XL" },
 
     // Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket
