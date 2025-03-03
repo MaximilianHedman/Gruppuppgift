@@ -52,7 +52,7 @@ footer {
 
 @media (min-width: 768px) {
   .page-wrapper {
-    padding: 2rem;
+    padding: 7rem 2rem 2rem 2rem;
   }
   .product-container {
     gap: 3rem 1.7rem;
