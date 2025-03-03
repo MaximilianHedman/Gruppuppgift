@@ -9,7 +9,7 @@
   .cart-section, .order-form {
     background: #e6e2dc88;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 5px;
     width: 100%;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -86,6 +86,7 @@
     flex-wrap: wrap;
     /*border: 1px solid rgb(4, 187, 17); grön*/
     box-shadow: 0 3px 6px rgba(46,45,45,0.5);
+    margin-bottom: 80px;
   }
 
   .form-container{
