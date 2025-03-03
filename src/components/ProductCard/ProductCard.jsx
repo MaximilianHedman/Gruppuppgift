@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useFavorites } from "../../context/FavoritesContext"; // Import Favorites Context
 import "./ProductCard.css";
 
+
 const ProductCard = ({ product, onProductClick }) => {
   const { favorites, toggleFavorite } = useFavorites();
   const isFavorite = favorites.some((fav) => fav.id === product.id);
