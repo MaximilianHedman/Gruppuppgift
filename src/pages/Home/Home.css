@@ -14,9 +14,9 @@
   border-radius: 8px;
   object-fit: cover;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   position: relative;
-  background-image: url("./Bilder-homepage/middle.jpg");
+  background-image: url("./Bilder-homepage/middle3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -207,12 +207,14 @@
   cursor: pointer;
   border: 2px solid #76726d;
   border-radius: 2px;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease-in-out;
   font-weight: bold;
 }
 
 .text-section .learn-more:hover {
-  background-color: #e3dfd9;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  filter: brightness(0.8);
+  color: #ffffff;
 }
 
 .image-section {
@@ -269,7 +271,7 @@
   width: 80%;
 }
 .review-1 .review-image {
-  background-image: url("./Bilder-homepage/profil2.jpg");
+  background-image: url("./Bilder-homepage/profil3.jpg");
 }
 
 .review-2 .review-image {
@@ -277,7 +279,7 @@
 }
 
 .review-3 .review-image {
-  background-image: url("./Bilder-homepage/profil3.jpg");
+  background-image: url("./Bilder-homepage/profil2.jpg");
 }
 
 .review-image {
@@ -306,11 +308,20 @@
   align-items: center;
   gap: 10px;
 }
-
+.fa-star {
+  color: black;
+  font-size: 12px;
+  padding: 1px;
+}
+.fa-star-half-alt {
+  color: black;
+  font-size: 12px;
+}
 .review-name {
   font-weight: bold;
   color: #000000;
   font-style: italic;
+  margin-right: 30px;
 }
 
 .review-text {
@@ -329,7 +340,7 @@
     margin-top: 100px;
     padding: 40px;
     margin-bottom: -100px;
-    margin-right: 10px;
+    margin-right: 60px;
   }
   .hero h2 {
     width: 100%;
@@ -339,13 +350,14 @@
     color: #ffffff;
     margin-bottom: -75px;
     padding: 40px;
+    margin-right: 60px;
   }
 
   .hero p {
     width: 100%;
     font-size: 1.2rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    margin-right: -15px;
+    margin-right: 50px;
     color: #ffffff;
     padding: 35px;
   }
@@ -362,6 +374,9 @@
     gap: 10px;
     margin-right: 25px;
     margin-left: 25px;
+  }
+  .category-title {
+    font-size: 35px;
   }
 
   .middle-part h2 {
@@ -432,7 +447,7 @@
     margin-top: 100px;
     padding: 40px;
     margin-bottom: -110px;
-    margin-right: 10px;
+    margin-right: 70px;
   }
   .hero h2 {
     width: 100%;
@@ -448,7 +463,7 @@
     width: 100%;
     font-size: 1.2rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    margin-right: -15px;
+    margin-right: 43px;
     color: #ffffff;
 
     margin-top: 0px;
@@ -461,5 +476,8 @@
     gap: 10px;
     margin-right: 25px;
     margin-left: 25px;
+  }
+  .category-title {
+    font-size: 48px;
   }
 }
