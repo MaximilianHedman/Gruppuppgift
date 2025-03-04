@@ -1,0 +1,125 @@
+.container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  /* Sección del carrito */
+  .cart-section, .order-form {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  /* Cart Items más compactos */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .product-image {
+    width: 50px;
+    height: 50px;
+    background: #ddd;
+    border-radius: 5px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .quantity-controls button {
+    padding: 5px 10px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+  }
+  
+  .quantity-nr {
+    font-size: 1rem;
+  }
+  
+  .remove-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: red;
+  }
+  
+  /* Estilos del formulario */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Diseño en columnas */
+  .form-columns {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Cada columna ocupa 50% */
+  .form-column {
+    width: 50%;
+  }
+  
+  h5 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos generales de los inputs */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+  }
+  
+  /* Zip Code y City en la misma línea */
+  .zip-city-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-group-small {
+    width: 50%;
+  }
+  
+  /* Botón de checkout */
+  .checkout-button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  .checkout-button:hover {
+    background: #0056b3;
+  }
+  
