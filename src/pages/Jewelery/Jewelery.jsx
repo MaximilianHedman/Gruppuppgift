@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import productService from "../../services/productService";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import { useNavigate } from "react-router-dom";
-import "./Jewelery.css";
 
 const Jewelery = () => {
   const [products, setProducts] = useState([]);

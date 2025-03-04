@@ -1,10 +1,160 @@
-import React from 'react'
-import './ShoppingCart.css'
+import React, { useState } from 'react';
+import { useShoppingCart } from '../../context/ShoppingCartContext';
+import "./ShoppingCart.css";
 
 const ShoppingCart = () => {
-  return (
-    <div>ShoppingCart</div>
-  )
-}
+    const { cart, updateCartQuantity, removeFromCart } = useShoppingCart();
+    
+    const [order, setOrder] = useState({
+        name: "",
+        lastname: "",
+        address: "",
+        email: "",
+        zipcode: "",
+        city: "",
+        phone: "",
+    });
 
-export default ShoppingCart
+    const handleQuantityChange = (id, delta) => {
+        const item = cart.find(product => product.id === id);
+        if (!item) return;
+        const newQuantity = item.quantity + delta;
+        if (newQuantity > 0) {
+            updateCartQuantity(id, newQuantity);
+        } else {
+            removeFromCart(id);
+        }
+    };
+
+    const handleInputChange = (event) => {
+        setOrder({ ...order, [event.target.name]: event.target.value });
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log("Order submitted:", order);
+        alert("Thank you for your purchase!");
+    };
+
+    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0); // Beräknar totalpriset
+
+    return (
+        <div className="shoppingcart-container">
+            <div className="cart-section">
+                <h2>Shopping Cart</h2>
+                {cart.length === 0 ? <p>Your cart is empty</p> : cart.map((item) => (
+                    <div key={item.id} className="cart-item">
+                        <div className="product-img">
+                            <img src={item.image} alt={item.name} />
+                        </div>
+                        <div className="quantity-controls">
+                            <button onClick={() => handleQuantityChange(item.id, -1)}>
+                                <i className="fa-solid fa-minus"></i>
+                            </button>
+                            <span>{item.quantity}</span>
+                            <button onClick={() => handleQuantityChange(item.id, 1)}>
+                                <i className="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        <div className="product-price">Price: {item.price * item.quantity}€</div>
+                        <button className="remove-button" onClick={() => removeFromCart(item.id)}>
+                            <i className="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                ))}
+                {/* Lägg till totalpriset här */}
+                <div className="total-price">
+                    <h3>Total Price: {totalPrice}€</h3>
+                </div>
+            </div>
+
+            <div className="order-form">
+                <h2>Shipping Information</h2>
+                <form className="form-container" onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <h5>First name:</h5>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Enter your name"
+                            value={order.name}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <h5>Last name:</h5>
+                        <input
+                            type="text"
+                            name="lastname"
+                            placeholder="Enter your last name"
+                            value={order.lastname}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <h5>Address:</h5>
+                        <input
+                            type="text"
+                            name="address"
+                            placeholder="Enter your address"
+                            value={order.address}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div className="zip-city-container">
+                        <div className="form-group">
+                            <h5>Zip code:</h5>
+                            <input
+                                type="text"
+                                name="zipcode"
+                                placeholder="Enter your zip code"
+                                value={order.zipcode}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <h5>City:</h5>
+                            <input
+                                type="text"
+                                name="city"
+                                placeholder="Enter your city"
+                                value={order.city}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <h5>Email:</h5>
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            value={order.email}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <h5>Phone number:</h5>
+                        <input
+                            type="text"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            value={order.phone}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="checkout-button">CHECK OUT</button>
+                </form>
+            </div>
+        </div>
+    );
+};
+
+export default ShoppingCart;

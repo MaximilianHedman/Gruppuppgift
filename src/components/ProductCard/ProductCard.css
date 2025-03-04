@@ -4,12 +4,10 @@ body {
 i {
   font-size: 19px;
 }
-
-/* Default ProductCard Styling (used everywhere else) */
 .product-card {
   width: 181px;
   height: 327px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border: 0.94px solid rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
   padding: 20px;
@@ -21,8 +19,6 @@ i {
   margin: 0;
   flex: 0 0 auto;
 }
-
-/* ProductCard inside ProductDetails (Different Styling) */
 .product-card-details {
   width: 100%;
   max-width: 400px;
@@ -31,8 +27,6 @@ i {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 25px;
 }
-
-/* Hide product-info inside ProductDetails*/
 .product-card-details .product-info {
   display: none;
 }

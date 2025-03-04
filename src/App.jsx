@@ -7,8 +7,6 @@ import Jewelery from "./pages/Jewelery/Jewelery";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import ThankYouCard from "./pages/ThankYouCard/ThankYouCard";
 import Favorites from "./pages/Favorites/Favorites";
-import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import ProductDetailsPages from "./pages/ProductDetailsPage/ProductDetailsPage";
 
@@ -27,8 +25,6 @@ const App = () => {
                     <Route path='/shoppingcart' element={<ShoppingCart />} />
                     <Route path='/thank-you-card' element={<ThankYouCard />} />
                     <Route path='/favorites' element={<Favorites />} />
-                    <Route path='/about' element={<About />} />
-                    <Route path='/contact' element={<Contact />} />
                 </Routes>
 
             <Footer />

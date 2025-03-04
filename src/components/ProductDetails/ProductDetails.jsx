@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import productService from '../../services/productService';
 import { productData } from '../../data/productData';
-import ProductCard from '../ProductCard/ProductCard'; // Import ProductCard
+import { useShoppingCart } from "../../context/ShoppingCartContext"; // Import ShoppingCart Context
+import ProductCard from '../ProductCard/ProductCard';
 import './ProductDetails.css';
 
 const ProductDetails = () => {
     const { id } = useParams();
+    const { addToCart } = useShoppingCart(); // Use addToCart function
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -17,7 +19,7 @@ const ProductDetails = () => {
         const fetchProduct = async () => {
             try {
                 const data = await productService.getSingleProduct(id);
-                const localData = productData[parseInt(id)] || {};
+                const localData = productData[parseInt(id)] || {}; // Merge local product data
                 setProduct({ ...data, ...localData });
             } catch (err) {
                 setError(err.message);
@@ -82,8 +84,10 @@ const ProductDetails = () => {
                                 </div>
                             </div>
                         </div>
-
-                        <button className="product-details-add-to-cart">ADD TO CART</button>
+                        {/* ADD TO CART Button */}
+                        <button className="product-details-add-to-cart" onClick={() => addToCart(product)}>
+                            ADD TO CART
+                        </button>
                         <details className="product-details-description">
                             <summary>DESCRIPTION</summary>
                             <p>{product.description}</p>

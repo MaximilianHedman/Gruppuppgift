@@ -2,11 +2,13 @@ import { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useFavorites } from "../../context/FavoritesContext";
-
+import { useShoppingCart } from "../../context/ShoppingCartContext";
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [showMenu, setShowMenu] = useState(false); 
   const { favorites } = useFavorites();
+  const { cart } = useShoppingCart();
+  const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   const handleSearchClick = () => {
     setShowSearch(!showSearch);
@@ -52,7 +54,6 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-
       <div className={`nav-icons-desktop ${showSearch ? "hidden" : ""}`}>
         <span
           className={`nav-icon search ${showSearch ? "hidden" : ""}`}
@@ -60,19 +61,21 @@ const Navbar = () => {
         >
           <i className="fa fa-search"></i>
         </span>
-
+        {/* Favorites Icon with Counter */}
         <Link to="/favorites" className="nav-icon favorites-icon">
           <i className="fa fa-heart"></i>
           {favorites.length > 0 && (
             <span className="favorites-count">{favorites.length}</span>
           )}
         </Link>
-
-        <Link to="/shoppingcart" className="nav-icon">
+        {/* Shopping Cart Icon with Counter */}
+        <Link to="/shoppingcart" className="nav-icon cart-icon">
           <i className="fa fa-shopping-cart"></i>
+          {cartItemCount > 0 && (
+            <span className="cart-count">{cartItemCount}</span>
+          )}
         </Link>
       </div>
-
       {showSearch && (
         <div className="search-input-container">
           <input type="text" className="search-input" placeholder="Search..." />
@@ -112,16 +115,18 @@ const Navbar = () => {
         <span className="nav-icon" onClick={handleSearchClick}>
           <i className="fa fa-search"></i>
         </span>
-
         <Link to="/favorites" className="nav-icon favorites-icon">
           <i className="fa fa-heart"></i>
           {favorites.length > 0 && (
             <span className="favorites-count">{favorites.length}</span>
           )}
         </Link>
-
-        <Link to="/shoppingcart" className="nav-icon">
+        {/* Shopping Cart Icon with Counter for Mobile */}
+        <Link to="/shoppingcart" className="nav-icon cart-icon">
           <i className="fa fa-shopping-cart"></i>
+          {cartItemCount > 0 && (
+            <span className="cart-count">{cartItemCount}</span>
+          )}
         </Link>
       </div>
     </nav>
