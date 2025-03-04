@@ -1,31 +1,39 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useFavorites } from "../../context/FavoritesContext";
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
+  const [showMenu, setShowMenu] = useState(false); 
   const { favorites } = useFavorites();
-
 
   const handleSearchClick = () => {
     setShowSearch(!showSearch);
   };
 
-
   const handleCloseSearch = () => {
     setShowSearch(false);
   };
 
+  const toggleMenu = () => {
+    setShowMenu(!showMenu); 
+  };
+
   return (
     <nav className="navbar">
-
       <div className="logo">
         <Link to="/" className="logo-link">
           SOLENIA
         </Link>
       </div>
 
+  
+      <div className="hamburger-container" onClick={toggleMenu}>
+        <div className="hamburger-icon">
+          <i className={showMenu ? "fa fa-times" : "fa fa-bars"}></i>
+        </div>
+      </div>
 
       <ul className={`nav-links-desktop ${showSearch ? "hidden" : ""}`}>
         <li>
@@ -44,7 +52,6 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-
 
       <div className={`nav-icons-desktop ${showSearch ? "hidden" : ""}`}>
         <span
@@ -66,7 +73,6 @@ const Navbar = () => {
         </Link>
       </div>
 
-
       {showSearch && (
         <div className="search-input-container">
           <input type="text" className="search-input" placeholder="Search..." />
@@ -76,6 +82,28 @@ const Navbar = () => {
         </div>
       )}
 
+     
+      {showMenu && (
+        <div className="mobile-menu">
+          <ul>
+            <li>
+              <Link to="/womens-clothing" className="nav-link-mobile" onClick={toggleMenu}>
+                WOMEN
+              </Link>
+            </li>
+            <li>
+              <Link to="/mens-clothing" className="nav-link-mobile" onClick={toggleMenu}>
+                MEN
+              </Link>
+            </li>
+            <li>
+              <Link to="/jewelery" className="nav-link-mobile" onClick={toggleMenu}>
+                JEWELERY
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
 
       <div className={`nav-icons-mobile ${showSearch ? "hidden" : ""}`}>
         <Link to="/" className="nav-icon">
@@ -101,3 +129,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
