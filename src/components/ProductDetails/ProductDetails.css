@@ -6,6 +6,7 @@
   min-height: 100vh;
   padding: 15px;
 }
+
 .product-details-card {
   display: flex;
   flex-direction: column;
@@ -17,6 +18,7 @@
   width: 100%;
   gap: 15px;
 }
+
 .product-details-info {
   width: 100%;
   padding: 15px;
@@ -25,38 +27,49 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .product-details-title {
   font-size: 20px;
   font-weight: bold;
 }
+
 .product-details-price {
-  font-size: 18px;
-  font-weight: bold;
   margin-top: 10px;
 }
+
 .product-details-options {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin: 15px 0;
 }
+
 .product-details-option {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
 }
+
 .product-details-option-box,
 .product-details-option-box-color {
-  border: 1px solid black;
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
+  padding: 10px 15px;
   margin: 5px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  
+  text-align: center;
 }
-.product-details-option-box-color {
-  padding: 5px 15px;
+
+
+.product-details-option-box-color.selected,
+.product-details-option-box.selected {
+  background-color: black;
+  color: white;
+  font-weight: bold;
 }
+
 .product-details-add-to-cart {
   background-color: black;
   color: white;
@@ -65,12 +78,13 @@
   cursor: pointer;
   font-size: 16px;
   margin-top: 10px;
-  transition: background-color 0.3s;
   width: 100%;
 }
+
 .product-details-add-to-cart:hover {
   background-color: #333;
 }
+
 .product-details-description summary {
   cursor: pointer;
   margin-top: 10px;
@@ -81,36 +95,46 @@
   border: 1px solid black;
   font-weight: bold;
 }
+
 .product-details-description p {
   margin-top: 5px;
 }
+
+
 @media (min-width: 768px) {
   .product-details-card {
       flex-direction: row;
       max-width: 700px;
   }
+
   .product-details-info {
       width: 50%;
       text-align: left;
   }
+
   .product-details-option {
       align-items: flex-start;
   }
+
   .product-details-add-to-cart {
       width: auto;
   }
 }
+
 @media (min-width: 1024px) {
   .product-details-card {
       max-width: 900px;
       gap: 20px;
   }
+
   .product-details-title {
       font-size: 24px;
   }
+
   .product-details-price {
       font-size: 20px;
   }
+
   .product-details-add-to-cart {
       font-size: 18px;
   }
