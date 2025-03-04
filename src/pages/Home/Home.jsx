@@ -1,5 +1,7 @@
 import React from "react";
+
 import { useNavigate } from "react-router-dom";
+
 import "./Home.css";
 
 const Home = () => {
@@ -23,7 +25,9 @@ const Home = () => {
     <div className="home">
       <section className="hero">
         <h1>SOLENIA</h1>
-        <h2>TIMELESS PIECES THAT COMBINE CLASSIC AND MODERN DESIGNS.</h2>
+
+        <h2>TIMELESS PIECES THAT COMBINE CLASSIC AND MODERN DESIGNS</h2>
+
         <p>
           Essentials that combine style and function perfect for the demands of
           everyday life.
@@ -51,56 +55,77 @@ const Home = () => {
 
       <section className="middle-part">
         <h2>SOPHISTICATED. MINIMALISTIC. TIMELESS.</h2>
+
         <p>Style meets innovation. Fashion designed for modern living.</p>
       </section>
 
       <section className="jewelry">
         <div className="image-section"></div>
+
         <div className="text-section">
           <h3>
             Our jewelry collection adds the perfect touch to your look. Subtle
             yet unforgettable details that elevate your style.
           </h3>
+
           <button className="learn-more" onClick={handleLearnMoreClick}>
             LEARN MORE
           </button>
         </div>
       </section>
-
       <section className="reviews">
-        <h3>THOUSANDS OF HAPPY CUSTOMERS</h3>
-        <h4>Our reviews on SOLENIA</h4>
+        <h3>Trusted by Thousands of Happy Customers</h3>
+
+        <h4>
+          Real experiences and real voices. See what our customers say about
+          SOLENIA!
+        </h4>
+
         {[
           {
             id: 1,
             name: "Jenny L.",
-            text: "I absolutely love the quality of the fabrics! The design is modern but timeless. Highly recommend!",
-            rating: "4.5",
+            text: "I absolutely love the quality of the fabrics! Highly recommend!",
+            rating: 4,
           },
           {
             id: 2,
             name: "James R.",
-            text: "The shirts are stylish and the fit is just right. Great for both casual and business occasions.",
-            rating: "5",
+            text: "The shirts are stylish and the fit is just right. Great!",
+            rating: 4.5,
           },
           {
             id: 3,
             name: "Zara M.",
-            text: "Beautiful and delicate pieces! I bought a ring, and it's become my everyday accessory. Love it!",
-            rating: "4.8",
+            text: "Beautiful and delicate pieces! I bought a ring. Love it!",
+            rating: 5,
           },
-        ].map((review, index) => (
-          <div key={review.id} className={`review review-${index + 1}`}>
-            <div className="review-image"></div>
-            <div className="review-content">
-              <span className="review-rating">
-                <span className="review-name">{review.name}</span>{" "}
-                {review.rating}
-              </span>
-              <p className="review-text">{review.text}</p>
+        ].map((review, index) => {
+          const fullStars = Math.floor(review.rating); // Antal hela stjärnor
+          const halfStar = review.rating % 1 !== 0; // Om det finns en halv stjärna
+
+          return (
+            <div key={review.id} className={`review review-${index + 1}`}>
+              <div className="review-image"></div>
+
+              <div className="review-content">
+                <span className="review-rating">
+                  <span className="review-name">{review.name}</span>
+                  <span className="stars">
+                    {Array(fullStars)
+                      .fill()
+                      .map((_, i) => (
+                        <i key={i} className="fa-solid fa-star"></i>
+                      ))}
+                    {halfStar && <i className="fa-solid fa-star-half-alt"></i>}
+                  </span>
+                </span>
+
+                <p className="review-text">{review.text}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </section>
     </div>
   );
