@@ -19,6 +19,8 @@
     margin-bottom: 1.5rem;
 }
 
+
+
 .quick-links h3 {
     font-size: 0.9rem;
 }
@@ -60,24 +62,27 @@
 
 @media (min-width: 768px) {
 
-    .subscribe-form {
-        display: flex;
-    }
-
 
     .footer-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem 1.5rem 0.7rem 1.5rem;
+        justify-content: space-evenly;
+        padding: 1rem 0 0.7rem 0;
+    }
+
+    .footer-box {
+       display: flex;
+       justify-content: center;
+       width: 300px;
     }
 
     .quick-links {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        
     }
-
+    
     .subscribe-form {
         display: flex;
         flex-direction: column;
@@ -153,9 +158,15 @@
 
    .footer-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 1.5rem 0 1rem 0;
    }
+
+   .footer-box {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+ }
 
    .quick-links {
     gap: 1.5rem;
@@ -164,7 +175,7 @@
 
   @media (min-width: 1200px) {
     .quick-links {
-        gap: 2.5rem;
+        gap: 1.5rem;
        
     }
   }

@@ -5,6 +5,7 @@ const Footer = () => {
   return (
     <>
     <footer className="footer-container">
+    <div className="footer-box"> 
     <div className="quick-links"> 
       <ul>
         <h3>SUPPORT</h3>
@@ -24,8 +25,11 @@ const Footer = () => {
         <li>Men</li>
         <li>Jewelery</li>
       </ul>
+    </div>
 
     </div>
+
+    <div className="footer-box"> 
 
     <div className="subscribe-form"> 
       <h2>GET UPDATES</h2>
@@ -38,6 +42,9 @@ const Footer = () => {
       <button className="subscribe-button">SUBSCRIBE</button>
       </div>
     </div>
+    </div>
+
+    <div className="footer-box"> 
 
     <div className="socials">
       <h2>CONNECT WITH US</h2>
@@ -50,6 +57,7 @@ const Footer = () => {
       <i className="fa-brands fa-tiktok"></i>
       </div>
 
+    </div>
     </div>
 
     </footer>
