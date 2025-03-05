@@ -7,13 +7,17 @@ const Favorites = () => {
 
   return (
     <div className="page-wrapper">
-      <h2>Your Favorites</h2>
+      <h1>Your Favorites</h1>
       {favorites.length === 0 ? (
         <p>No favorites added yet.</p>
       ) : (
         <div className="product-container">
           {favorites.map((product) => (
-            <ProductCard key={product.id} product={product} onProductClick={() => { }} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              onProductClick={() => {}}
+            />
           ))}
         </div>
       )}
