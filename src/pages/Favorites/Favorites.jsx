@@ -9,7 +9,7 @@ const Favorites = () => {
 
   return (
     <div className="page-wrapper">
-      <h2>Your Favorites</h2>
+      <h1>Your Favorites</h1>
       {favorites.length === 0 ? (
         <p>No favorites added yet.</p>
       ) : (
