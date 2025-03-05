@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useShoppingCart } from '../../context/ShoppingCartContext';
+import { useNavigate } from 'react-router-dom';
 import "./ShoppingCart.css";
 
 const ShoppingCart = () => {
     const { cart, updateCartQuantity, removeFromCart } = useShoppingCart();
+    const navigate = useNavigate ();
     
     const [order, setOrder] = useState({
         name: "",
@@ -32,8 +34,8 @@ const ShoppingCart = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("Order submitted:", order);
-        alert("Thank you for your purchase!");
+
+        navigate ("/thank-you-card");
     };
 
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0); // Beräknar totalpriset
@@ -62,7 +64,6 @@ const ShoppingCart = () => {
                         </button>
                     </div>
                 ))}
-                {/* Lägg till totalpriset här */}
                 <div className="total-price">
                     <h3>Total Price: {totalPrice}€</h3>
                 </div>
@@ -150,8 +151,10 @@ const ShoppingCart = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="checkout-button">CHECK OUT</button>
                 </form>
+                    <div className="checkout-btn-container">
+                        <button type="submit" className="checkout-button">CHECK OUT</button>
+                    </div>
             </div>
         </div>
     );
