@@ -61,16 +61,16 @@ const Navbar = () => {
         >
           <i className="fa fa-search"></i>
         </span>
-        {/* Favorites Icon with Counter */}
+       
         <Link to="/favorites" className="nav-icon favorites-icon">
           <i className="fa fa-heart"></i>
           {favorites.length > 0 && (
             <span className="favorites-count">{favorites.length}</span>
           )}
         </Link>
-        {/* Shopping Cart Icon with Counter */}
+       
         <Link to="/shoppingcart" className="nav-icon cart-icon">
-          <i className="fa fa-shopping-cart"></i>
+        <i class="fa-solid fa-bag-shopping"></i>
           {cartItemCount > 0 && (
             <span className="cart-count">{cartItemCount}</span>
           )}
@@ -121,9 +121,9 @@ const Navbar = () => {
             <span className="favorites-count">{favorites.length}</span>
           )}
         </Link>
-        {/* Shopping Cart Icon with Counter for Mobile */}
+       
         <Link to="/shoppingcart" className="nav-icon cart-icon">
-          <i className="fa fa-shopping-cart"></i>
+        <i class="fa-solid fa-bag-shopping"></i>
           {cartItemCount > 0 && (
             <span className="cart-count">{cartItemCount}</span>
           )}
