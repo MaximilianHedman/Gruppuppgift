@@ -6,7 +6,8 @@
   gap: 10px;
 }
 
-.cart-section, .order-form {
+.cart-section,
+.order-form {
   background-color: rgb(243, 239, 233);
   padding: 20px;
   border-radius: 5px;
@@ -21,7 +22,7 @@
   justify-content: center;
   text-align: center;
   /*margin: 100px auto 5px auto; Ännu mindre avstånd */
-  }
+}
 
 .order-form {
   padding: 30px;
@@ -212,7 +213,8 @@
     width: 90%;
   }
 
-  .cart-section, .order-form {
+  .cart-section,
+  .order-form {
     width: 100%;
     max-width: none;
     min-height: auto;
