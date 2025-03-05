@@ -250,7 +250,6 @@
     padding: 0.2rem 0;
   }
 
-
   .nav-icons-desktop {
     display: flex;
     justify-content: flex-end;
@@ -261,11 +260,8 @@
   }
   .nav-icon {
     margin: 0 15px;
-    font-size: 1.2rem;
   }
-  .nav-icon i {
-    font-size: 1rem;
-  }
+
   .nav-icons-mobile {
     display: none;
   }
@@ -318,11 +314,9 @@
   .search-input-container {
     width: 88%;
     transform: translateX(-44.5%); 
-    
   }
 
 }
-
 
 @media (min-width: 1200px) {
   .search-input-container {
@@ -330,6 +324,5 @@
      top: 12px; 
     left: 46%; 
     transform: translateX(-50%); 
-   
   }
 }
