@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import "./SearchFilter.css"; // Separate CSS file for search filter styling
+import { Link } from "react-router-dom";
+import "./SearchFilter.css";
 import { productData } from "../../data/productData";
 import productService from "../../services/productService";
 
@@ -60,21 +61,27 @@ const SearchFilter = ({ showSearch, onCloseSearch }) => {
             const apiProduct = fetchedProducts.find((p) => p.id === numericId);
             return (
               <li key={id} className="sf-item">
-                <div className="sf-item-info">
-                  <strong>{apiProduct?.title || `Product ID: ${id}`}</strong>
-                  <br />
-                  <strong>Colors:</strong>{" "}
-                  {Object.entries(item)
-                    .filter(([key]) => key.toLowerCase().includes("color"))
-                    .map(([_, val]) => val)
-                    .join(", ")}
-                  <br />
-                  <strong>Sizes:</strong>{" "}
-                  {Object.entries(item)
-                    .filter(([key]) => key.toLowerCase().includes("size"))
-                    .map(([_, val]) => val)
-                    .join(", ")}
-                </div>
+                <Link
+                  to={`/product/${numericId}`}
+                  className="sf-item-link"
+                  onClick={onCloseSearch}
+                >
+                  <div className="sf-item-info">
+                    <strong>{apiProduct?.title || `Product ID: ${id}`}</strong>
+                    <br />
+                    <strong>Colors:</strong>{" "}
+                    {Object.entries(item)
+                      .filter(([key]) => key.toLowerCase().includes("color"))
+                      .map(([_, val]) => val)
+                      .join(", ")}
+                    <br />
+                    <strong>Sizes:</strong>{" "}
+                    {Object.entries(item)
+                      .filter(([key]) => key.toLowerCase().includes("size"))
+                      .map(([_, val]) => val)
+                      .join(", ")}
+                  </div>
+                </Link>
               </li>
             );
           })}
