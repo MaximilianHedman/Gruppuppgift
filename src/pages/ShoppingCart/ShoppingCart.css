@@ -21,7 +21,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  /*margin: 100px auto 5px auto; Ännu mindre avstånd */
 }
 
 .order-form {
@@ -34,7 +33,7 @@
 .order-form h2 {
   font-size: 1.4rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .cart-section h2 {
@@ -43,13 +42,6 @@
   margin-bottom: 20px;
   margin-top: 10px;
 }
-
-/* .total-price h3 {
-  font-size: 1rem;
-  font-weight: 550;
-  margin-bottom: 10px;
-  margin-left: 18rem;
-} */
 
 .order-form h5 {
   font-size: 1rem;
@@ -95,7 +87,6 @@
   border: 1px solid black;
   width: 150px;
   height: 50px;
-  box-shadow: 0 3px 6px rgba(46, 45, 45, 0.5);
   background-color: white;
   text-align: center;
 }
@@ -139,11 +130,13 @@
 }
 
 .total-price {
-  text-align: center;
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-left: 18rem;
 }
 
 .form-container {
@@ -195,12 +188,9 @@
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  /* margin-top: 20px; */
-  /* width: fit-content; */
   text-align: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   max-width: 300px;
-  /* margin: 20px auto 0 auto; */
   width: 100%;
 }
 
