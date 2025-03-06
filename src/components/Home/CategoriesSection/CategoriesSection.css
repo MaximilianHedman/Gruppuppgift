@@ -1,0 +1,74 @@
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.categories-h2 {
+    letter-spacing: 5px;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    padding: 30px;
+    margin-top: 0px;
+    text-transform: uppercase;
+    background-color: #e3dfd9;
+    color: #89847d;
+    width: 100%;
+    text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.category-title {
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.category-item {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.women {
+    background-image: url("/Bilder-homepage/women.jpeg");
+}
+
+.men {
+    background-image: url("/Bilder-homepage/men3.jpeg");
+}
+
+.jewelery {
+    background-image: url("/Bilder-homepage/j2.jpeg");
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.7);
+}

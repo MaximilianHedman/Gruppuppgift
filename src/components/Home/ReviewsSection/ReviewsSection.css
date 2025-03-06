@@ -1,0 +1,34 @@
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.reviews h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 30px;
+    margin-top: 0;
+    text-transform: uppercase;
+    background-color: #e3dfd9;
+    color: #746f68;
+    width: 100%;
+    text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.2);
+    letter-spacing: 5px;
+}
+
+.review {
+    width: 90%;
+    height: 150px;
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    background: rgba(56, 95, 130, 0.387);
+    padding: 20px;
+    margin: 5px;
+    max-width: 300px;
+    border: 2px solid rgba(117, 136, 167, 0.159);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+}
