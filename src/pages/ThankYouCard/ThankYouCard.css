@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
-    background-color: #E4E1DC;
+    background-color: #e4e1dc38;
     padding: 2.5rem 1rem 2rem 1rem;
     width: 80vw; 
     max-width: 380px;
@@ -20,7 +20,7 @@
     font-family: 'Poppins', sans-serif;
     color: #1A1B1C;
     text-align: center;
-    border-radius: 8px;
+    border: #cbcbc8 1px solid;
 }
 
 .thankyou-card h2 {
@@ -29,7 +29,7 @@
 }
 
 .thankyou-card p {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-size: 13px;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 1.5rem;

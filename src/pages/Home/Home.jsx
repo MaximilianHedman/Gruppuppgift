@@ -1,5 +1,7 @@
 import React from "react";
 
+import { reviewData } from "../../data/reviewData";
+
 import { useNavigate } from "react-router-dom";
 
 import "./Home.css";
@@ -73,6 +75,7 @@ const Home = () => {
           </button>
         </div>
       </section>
+
       <section className="reviews">
         <h3>Trusted by Thousands of Happy Customers</h3>
 
@@ -81,27 +84,9 @@ const Home = () => {
           SOLENIA!
         </h4>
 
-        {[
-          {
-            id: 1,
-            name: "Jenny L.",
-            text: "I absolutely love the quality of the fabrics! Highly recommend!",
-            rating: 4,
-          },
-          {
-            id: 2,
-            name: "James R.",
-            text: "The shirts are stylish and the fit is just right. Great!",
-            rating: 4.5,
-          },
-          {
-            id: 3,
-            name: "Zara M.",
-            text: "Beautiful and delicate pieces! I bought a ring. Love it!",
-            rating: 5,
-          },
-        ].map((review, index) => {
+        {reviewData.map((review, index) => {
           const fullStars = Math.floor(review.rating); // Antal hela stjärnor
+
           const halfStar = review.rating % 1 !== 0; // Om det finns en halv stjärna
 
           return (
@@ -111,12 +96,15 @@ const Home = () => {
               <div className="review-content">
                 <span className="review-rating">
                   <span className="review-name">{review.name}</span>
+
                   <span className="stars">
                     {Array(fullStars)
                       .fill()
+
                       .map((_, i) => (
                         <i key={i} className="fa-solid fa-star"></i>
                       ))}
+
                     {halfStar && <i className="fa-solid fa-star-half-alt"></i>}
                   </span>
                 </span>
