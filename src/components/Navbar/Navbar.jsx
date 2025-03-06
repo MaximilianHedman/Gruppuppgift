@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useFavorites } from "../../context/FavoritesContext";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import SearchFilter from "./SearchFilter";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
