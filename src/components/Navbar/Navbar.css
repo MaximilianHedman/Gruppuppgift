@@ -8,35 +8,40 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: 3.5rem;
   z-index: 100;
-
 }
+
 .logo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 0.2rem;
 }
+
 .logo-link {
   text-decoration: none;
   font-size: 1.8rem;
   color: #1A1B1C;
   font-weight: bold;
 }
+
 .nav-links-desktop {
   list-style-type: none;
   display: flex;
   justify-content: flex-start;
   margin-left: 10px;
 }
+
 .nav-links-desktop li {
   margin: 0 0.8rem;
 }
+
 .nav-link {
   text-decoration: none;
   font-size: 1rem;
   color: #1A1B1C;
   position: relative;
 }
+
 .nav-link::after {
   content: "";
   position: absolute;
@@ -47,29 +52,33 @@
   background-color: #1A1B1C;
   transition: width 0.3s ease-in-out;
 }
+
 .nav-link:hover::after {
   width: 100%;
 }
+
 .nav-icons-desktop {
   display: flex;
   justify-content: flex-end;
   margin-right: 10px;
-  
 }
+
 .nav-icon {
   text-decoration: none;
   cursor: pointer;
   font-size: 1.2rem;
 }
+
 .nav-icon i {
   color: #1A1B1C;
 }
-.search-input:focus {
-  outline: none;
-}
+
+
+
 .favorites-icon {
   position: relative;
 }
+
 .favorites-count {
   position: absolute;
   top: -6px;
@@ -85,9 +94,11 @@
   justify-content: center;
   align-items: center;
 }
+
 .cart-icon {
   position: relative;
 }
+
 .cart-count {
   position: absolute;
   top: -6px;
@@ -104,13 +115,12 @@
   align-items: center;
 }
 
-
 .hamburger-container {
   position: absolute;
-  right: 12px; 
+  right: 12px;
   top: 28px;
-  transform: translateY(-50%); 
-  z-index: 100; 
+  transform: translateY(-50%);
+  z-index: 100;
 }
 
 .hamburger-icon i {
@@ -119,26 +129,22 @@
   cursor: pointer;
 }
 
-
-
-/* För mobilvyn */
+/* ==================== MOBILE (max-width: 768px) ==================== */
 @media (max-width: 768px) {
 
- 
   .nav-links-desktop,
   .nav-icons-desktop {
     display: none;
   }
 
   .hamburger-container {
-    display: block; 
+    display: block;
   }
 
   .nav-links-desktop,
   .nav-icons-desktop {
     display: none;
   }
-
 
   .mobile-menu {
     position: fixed;
@@ -187,61 +193,43 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 10px 0 12px 0;
   }
+
   .logo {
     position: absolute;
     top: 5px;
     left: 50%;
     transform: translateX(-50%);
   }
-  .search-input-container {
-    position: absolute;
-    display: flex;
-    top: 5px;
-    left: 48%;
-    transform: translateX(-50%);
-    width: 80%;
-    z-index: 100;
-    background-color:#FFFDFA ;
-  }
-  .search-input {
-    width: 100%;
-    height: 2.5rem;
-    padding: 15px;
-    border: none;
-    border-bottom: 0.5px solid #8D8D8D;
-    font-size: 16px;
-    background-color:#FFFDFA ;
-  }
+
   .close-search {
-    margin-right: 0;
     cursor: pointer;
     position: absolute;
-    right: 0.3rem;
-    top: 60%;
+    right: 0.5rem;
+    top: 50%;
     transform: translateY(-50%);
   }
 
   .close-search i {
     font-size: 15px;
     color: #555656;
- 
-  }   }
+  }
+}
 
-/* För desktop */
+/* ==================== DESKTOP (min-width: 769px) ==================== */
 @media (min-width: 769px) {
-
   .hamburger-container {
     display: none;
   }
 
   .navbar {
     padding: 2rem 0.5rem;
-    background-color:#FFFDFA;
+    background-color: #FFFDFA;
     position: fixed;
     z-index: 100;
     top: 0;
     left: 0;
   }
+
   .nav-links-desktop {
     display: flex;
     justify-content: flex-start;
@@ -256,8 +244,9 @@
     margin-right: 0.5rem;
     margin-left: 1rem;
     padding-bottom: 0.2rem;
-    background-color:#FFFDFA ;
+    background-color: #FFFDFA;
   }
+
   .nav-icon {
     margin: 0 15px;
   }
@@ -265,29 +254,12 @@
   .nav-icons-mobile {
     display: none;
   }
+
   .nav-icons-desktop .nav-icon.search.hidden {
     display: none;
   }
-  .search-input-container {
-    position: absolute;
-    top: 12px; 
-    left: 40%;
-    transform: translateX(-45%); 
-    width: 85%; 
-    display: flex;
-    justify-content: center; 
-    z-index: 10;
-    background-color: #FFFDFA;
-  }
-  .search-input {
-    width: 100%;
-    height: 2.2rem;
-    padding: 15px;
-    border: none;
-    border-bottom: 0.5px solid #8D8D8D;
-    font-size: 16px;
-    background-color:#FFFDFA ;
-  }
+
+
   .close-search {
     cursor: pointer;
     position: absolute;
@@ -299,30 +271,5 @@
   .close-search i {
     font-size: 15px;
     color: #555656;
-  }
-}
-@media (min-width: 900px) {
-  .search-input-container {
-    width: 85%;
-    transform: translateX(-45%); 
-    
-  }
-}
-
-@media (min-width: 1000px) { 
-
-  .search-input-container {
-    width: 88%;
-    transform: translateX(-44.5%); 
-  }
-
-}
-
-@media (min-width: 1200px) {
-  .search-input-container {
-    width: 90%;
-     top: 12px; 
-    left: 46%; 
-    transform: translateX(-50%); 
   }
 }
