@@ -1,23 +1,23 @@
 import React, { useState } from "react";
-import { useFavorites } from "../../context/FavoritesContext"; // Import Favorites Context
-import { useShoppingCart } from "../../context/ShoppingCartContext"; // Import ShoppingCart Context
+import { useFavorites } from "../../context/FavoritesContext";
+import { useShoppingCart } from "../../context/ShoppingCartContext";
 import "./ProductCard.css";
 
 const ProductCard = ({ product, onProductClick, hideInfo = false, variant = "default" }) => {
   const { favorites, toggleFavorite } = useFavorites();
-  const { addToCart } = useShoppingCart(); // Use ShoppingCart Context
+  const { addToCart } = useShoppingCart();
   const isFavorite = favorites.some((fav) => fav.id === product.id);
   const [liked, setLiked] = useState(isFavorite);
   const handleHeartClick = (e) => {
-    e.stopPropagation(); // Prevents triggering onProductClick
+    e.stopPropagation();
     setLiked(!liked);
     toggleFavorite(product);
   };
   const handleCartClick = (e) => {
-    e.stopPropagation(); // Prevents triggering onProductClick
-    addToCart(product); // Always adds to the cart
+    e.stopPropagation();
+    addToCart(product);
   };
-  
+
   return (
     <div className={`product-card ${variant === "details" ? "product-card-details" : ""}`} onClick={() => onProductClick(product.id)}>
       <div className="icons-container">

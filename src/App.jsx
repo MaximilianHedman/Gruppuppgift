@@ -4,32 +4,32 @@ import Home from "./pages/Home/Home";
 import WomensClothing from "./pages/WomensClothing/WomensClothing";
 import MensClothing from "./pages/MensClothing/MensClothing";
 import Jewelery from "./pages/Jewelery/Jewelery";
+import ProductDetailsPages from "./pages/ProductDetailsPage/ProductDetailsPage";
+import Favorites from "./pages/Favorites/Favorites";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import ThankYouCard from "./pages/ThankYouCard/ThankYouCard";
-import Favorites from "./pages/Favorites/Favorites";
 import Footer from "./components/Footer/Footer";
-import ProductDetailsPages from "./pages/ProductDetailsPage/ProductDetailsPage";
 
 const App = () => {
 
-    return (
-        <Router>
-            <Navbar />
+  return (
+    <Router>
+      <Navbar />
 
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/womens-clothing' element={<WomensClothing />} />
-                    <Route path='/mens-clothing' element={<MensClothing />} />
-                    <Route path='/jewelery' element={<Jewelery />} />
-                    <Route path='/product/:id' element={<ProductDetailsPages />} />
-                    <Route path='/shoppingcart' element={<ShoppingCart />} />
-                    <Route path='/thank-you-card' element={<ThankYouCard />} />
-                    <Route path='/favorites' element={<Favorites />} />
-                </Routes>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/womens-clothing' element={<WomensClothing />} />
+        <Route path='/mens-clothing' element={<MensClothing />} />
+        <Route path='/jewelery' element={<Jewelery />} />
+        <Route path='/product/:id' element={<ProductDetailsPages />} />
+        <Route path='/favorites' element={<Favorites />} />
+        <Route path='/shoppingcart' element={<ShoppingCart />} />
+        <Route path='/thank-you-card' element={<ThankYouCard />} />
+      </Routes>
 
-            <Footer />
-        </Router>
-    )
+      <Footer />
+    </Router>
+  )
 }
 
 export default App

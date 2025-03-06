@@ -1,16 +1,16 @@
 import React, { createContext, useContext } from "react";
-import useLocalFavorites from "../hooks/useLocalFavorites"; // Import the hook
+import useLocalFavorites from "../hooks/useLocalFavorites";
 
 const FavoritesContext = createContext();
 
 export const FavoritesProvider = ({ children }) => {
-    const { favorites, toggleFavorite } = useLocalFavorites(); // Use the hook
+  const { favorites, toggleFavorite } = useLocalFavorites();
 
-    return (
-        <FavoritesContext.Provider value={{ favorites, toggleFavorite }}>
-            {children}
-        </FavoritesContext.Provider>
-    );
+  return (
+    <FavoritesContext.Provider value={{ favorites, toggleFavorite }}>
+      {children}
+    </FavoritesContext.Provider>
+  );
 };
 
 export const useFavorites = () => useContext(FavoritesContext);

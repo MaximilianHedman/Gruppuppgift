@@ -42,6 +42,7 @@
   margin-bottom: -10px;
   margin-left: 3dvh;
 }
+
 .hero h2 {
   width: 100%;
   font-size: 1.2rem;
@@ -68,6 +69,7 @@
   flex-wrap: wrap;
   margin-top: 40px;
 }
+
 .categories-h2 {
   letter-spacing: 5px;
   font-size: 20px;
@@ -82,6 +84,7 @@
   width: 100%;
   text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.2);
 }
+
 .category-container {
   display: flex;
   flex-direction: column;
@@ -230,6 +233,7 @@
   gap: 15px;
   justify-content: center;
 }
+
 .review {
   width: 90%;
   height: 150px;
@@ -269,6 +273,7 @@
   color: #6d6964;
   width: 80%;
 }
+
 .review-1 .review-image {
   background-image: url("../../assets/Bilder-homepage/profil3.jpg");
 }
@@ -307,15 +312,18 @@
   align-items: center;
   gap: 10px;
 }
+
 .fa-star {
   color: black;
   font-size: 12px;
   padding: 1px;
 }
+
 .fa-star-half-alt {
   color: black;
   font-size: 12px;
 }
+
 .review-name {
   font-weight: bold;
   color: #000000;
@@ -341,6 +349,7 @@
     margin-bottom: -100px;
     margin-right: 60px;
   }
+
   .hero h2 {
     width: 100%;
     font-size: 2.1rem;
@@ -360,12 +369,15 @@
     color: #ffffff;
     padding: 35px;
   }
+
   .categories {
     gap: 10px;
   }
+
   .categories-h2 {
     letter-spacing: 10px;
   }
+
   .category-item {
     width: 235px;
     height: 300px;
@@ -374,6 +386,7 @@
     margin-right: 25px;
     margin-left: 25px;
   }
+
   .category-title {
     font-size: 35px;
   }
@@ -394,6 +407,7 @@
     color: #ffffff;
     padding: 40px;
   }
+
   .text-section h3 {
     width: 70%;
     font-size: 1rem;
@@ -406,22 +420,27 @@
     font-weight: 600;
     font-size: 16px;
   }
+
   .reviews h3 {
     text-align: center;
     font-size: 1.8rem;
   }
+
   .reviews h4 {
     width: 100%;
     font-size: 1rem;
   }
+
   .review {
     width: 100%;
     align-content: center;
   }
+
   .review-content {
     width: 60%;
     font-size: 0.8rem;
   }
+
   .review-image {
     margin-top: 20px;
     width: 60px;
@@ -438,6 +457,7 @@
     margin-right: -11px;
   }
 }
+
 @media (min-width: 1000px) {
   .hero h1 {
     width: 100%;
@@ -449,6 +469,7 @@
     margin-bottom: -110px;
     margin-right: 70px;
   }
+
   .hero h2 {
     width: 100%;
     font-size: 2.1rem;
@@ -477,6 +498,7 @@
     margin-right: 25px;
     margin-left: 25px;
   }
+
   .category-title {
     font-size: 48px;
   }
