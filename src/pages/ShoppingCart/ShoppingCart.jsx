@@ -45,6 +45,7 @@ const ShoppingCart = () => {
 
   return (
     <div className="shoppingcart-container">
+      <h4>Checkout Page</h4>
       <div className="cart-section">
         <h2>Shopping Cart</h2>
         {cart.length === 0 ? (
