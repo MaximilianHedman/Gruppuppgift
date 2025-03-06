@@ -44,7 +44,7 @@ const ProductDetails = () => {
                     <div className="product-details-info">
                         <h1 className="product-details-title">{product.title}</h1>
                         <p className="product-details-price">
-                           <strong>Price:</strong> € {product.price ? `${product.price}` : "Not available"}
+                           <strong>Price:</strong> ${product.price ? `${product.price}` : "Not available"}
                         </p>
 
                         <div className="product-details-options">

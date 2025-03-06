@@ -38,10 +38,9 @@ const ShoppingCart = () => {
     navigate("/thank-you-card");
   };
 
-  const totalPrice = cart.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+  const totalPrice = cart
+    .reduce((sum, item) => sum + item.price * item.quantity, 0)
+    .toFixed(2);
 
   return (
     <div className="shoppingcart-container">
@@ -66,7 +65,7 @@ const ShoppingCart = () => {
                 </button>
               </div>
               <div className="product-price">
-                Price: {item.price * item.quantity}€
+                Price: ${item.price * item.quantity}
               </div>
               <button
                 className="remove-button"
@@ -78,7 +77,7 @@ const ShoppingCart = () => {
           ))
         )}
         <div className="total-price">
-          <h3>Total Price: {totalPrice}€</h3>
+          <h3>Total Price: ${totalPrice}</h3>
         </div>
       </div>
 
