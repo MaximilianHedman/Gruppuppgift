@@ -3,9 +3,11 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useFavorites } from "../../context/FavoritesContext";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
+import SearchFilter from "./SearchFilter";
+
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
-  const [showMenu, setShowMenu] = useState(false); 
+  const [showMenu, setShowMenu] = useState(false);
   const { favorites } = useFavorites();
   const { cart } = useShoppingCart();
   const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
@@ -19,7 +21,7 @@ const Navbar = () => {
   };
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu); 
+    setShowMenu(!showMenu);
   };
 
   return (
@@ -30,7 +32,6 @@ const Navbar = () => {
         </Link>
       </div>
 
-  
       <div className="hamburger-container" onClick={toggleMenu}>
         <div className="hamburger-icon">
           <i className={showMenu ? "fa fa-times" : "fa fa-bars"}></i>
@@ -61,46 +62,57 @@ const Navbar = () => {
         >
           <i className="fa fa-search"></i>
         </span>
-       
+
         <Link to="/favorites" className="nav-icon favorites-icon">
           <i className="fa fa-heart"></i>
           {favorites.length > 0 && (
             <span className="favorites-count">{favorites.length}</span>
           )}
         </Link>
-       
+
         <Link to="/shoppingcart" className="nav-icon cart-icon">
-        <i class="fa-solid fa-bag-shopping"></i>
+          <i class="fa-solid fa-bag-shopping"></i>
           {cartItemCount > 0 && (
             <span className="cart-count">{cartItemCount}</span>
           )}
         </Link>
       </div>
+
+      {/* SEARCH BAR (separate component) */}
       {showSearch && (
-        <div className="search-input-container">
-          <input type="text" className="search-input" placeholder="Search..." />
-          <span className="close-search" onClick={handleCloseSearch}>
-            <i className="fa fa-times"></i>
-          </span>
-        </div>
+        <SearchFilter
+          showSearch={showSearch}
+          onCloseSearch={handleCloseSearch}
+        />
       )}
 
-     
       {showMenu && (
         <div className="mobile-menu">
           <ul>
             <li>
-              <Link to="/womens-clothing" className="nav-link-mobile" onClick={toggleMenu}>
+              <Link
+                to="/womens-clothing"
+                className="nav-link-mobile"
+                onClick={toggleMenu}
+              >
                 WOMEN
               </Link>
             </li>
             <li>
-              <Link to="/mens-clothing" className="nav-link-mobile" onClick={toggleMenu}>
+              <Link
+                to="/mens-clothing"
+                className="nav-link-mobile"
+                onClick={toggleMenu}
+              >
                 MEN
               </Link>
             </li>
             <li>
-              <Link to="/jewelery" className="nav-link-mobile" onClick={toggleMenu}>
+              <Link
+                to="/jewelery"
+                className="nav-link-mobile"
+                onClick={toggleMenu}
+              >
                 JEWELERY
               </Link>
             </li>
@@ -121,9 +133,9 @@ const Navbar = () => {
             <span className="favorites-count">{favorites.length}</span>
           )}
         </Link>
-       
+
         <Link to="/shoppingcart" className="nav-icon cart-icon">
-        <i class="fa-solid fa-bag-shopping"></i>
+          <i class="fa-solid fa-bag-shopping"></i>
           {cartItemCount > 0 && (
             <span className="cart-count">{cartItemCount}</span>
           )}
@@ -134,6 +146,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
