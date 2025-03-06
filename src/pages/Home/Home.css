@@ -15,7 +15,7 @@
   width: 100%;
   height: 110vh;
   position: relative;
-  background-image: url("./Bilder-homepage/middle3.jpg");
+  background-image: url("../../assets/Bilder-homepage/middle3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -116,15 +116,15 @@
 }
 
 .women {
-  background-image: url("/Bilder-homepage/women.jpeg");
+  background-image: url("../../assets/Bilder-homepage/women.jpeg");
 }
 
 .men {
-  background-image: url("/Bilder-homepage/men3.jpeg");
+  background-image: url("../../assets/Bilder-homepage/men3.jpeg");
 }
 
 .jewelery {
-  background-image: url("/Bilder-homepage/j2.jpeg");
+  background-image: url("../../assets/Bilder-homepage/j2.jpeg");
 }
 
 .category-item:hover {
@@ -137,7 +137,7 @@
   flex-direction: column;
   text-align: center;
   position: relative;
-  background-image: url("./Bilder-homepage/mid1.jpeg");
+  background-image: url("../../assets/Bilder-homepage/mid1.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -218,7 +218,7 @@
 
 .image-section {
   flex: 1;
-  background-image: url("./Bilder-homepage/j6.jpeg");
+  background-image: url("../../assets/Bilder-homepage/j6.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -270,15 +270,15 @@
   width: 80%;
 }
 .review-1 .review-image {
-  background-image: url("./Bilder-homepage/profil3.jpg");
+  background-image: url("../../assets/Bilder-homepage/profil3.jpg");
 }
 
 .review-2 .review-image {
-  background-image: url("./Bilder-homepage/profil1.webp");
+  background-image: url("../../assets/Bilder-homepage/profil1.webp");
 }
 
 .review-3 .review-image {
-  background-image: url("./Bilder-homepage/profil2.jpg");
+  background-image: url("../../assets/Bilder-homepage/profil2.jpg");
 }
 
 .review-image {
