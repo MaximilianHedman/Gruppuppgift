@@ -76,6 +76,27 @@
 }
 
 
+.sf-item-link {
+    color: #1A1B1C;
+    text-decoration: none;
+}
+
+
+.sf-item-link:hover {
+    text-decoration: underline;
+
+}
+
+
+.sf-item-link:visited,
+.sf-item-link:focus,
+.sf-item-link:active {
+    color: #1A1B1C;
+    text-decoration: none;
+}
+
+
+
 .sf-no-results {
     margin: 0;
     padding: 0.5rem;
