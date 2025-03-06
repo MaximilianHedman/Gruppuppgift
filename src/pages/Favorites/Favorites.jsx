@@ -1,9 +1,11 @@
 import React from "react";
 import { useFavorites } from "../../context/FavoritesContext";
+import { useNavigate } from "react-router-dom";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
 const Favorites = () => {
   const { favorites } = useFavorites();
+  const navigate = useNavigate();
 
   return (
     <div className="page-wrapper">
@@ -16,7 +18,7 @@ const Favorites = () => {
             <ProductCard
               key={product.id}
               product={product}
-              onProductClick={() => {}}
+              onProductClick={(id) => navigate(`/product/${id}`)}
             />
           ))}
         </div>
