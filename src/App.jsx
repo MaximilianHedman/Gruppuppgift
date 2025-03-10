@@ -6,8 +6,8 @@ import MensClothing from "./pages/MensClothing/MensClothing";
 import Jewelery from "./pages/Jewelery/Jewelery";
 import ProductDetailsPages from "./pages/ProductDetailsPage/ProductDetailsPage";
 import Favorites from "./pages/Favorites/Favorites";
-import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import ThankYouCard from "./pages/ThankYouCard/ThankYouCard";
+import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
